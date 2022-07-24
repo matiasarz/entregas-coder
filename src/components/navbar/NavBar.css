@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#aaa, #fff);
+}
+.nav div {
+    flex-grow: .5;
+    text-align: center;
+}
+.nav div img {
+    width: 60px;
+}
+.navBar {
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+}
+.navBar li {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.1em;
+}
+.navBar li a {
+    color: #000;
+}
