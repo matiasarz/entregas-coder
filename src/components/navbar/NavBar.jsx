@@ -1,5 +1,6 @@
 import './NavBar.css'
 import logo from '../../assets/logo.png'
+import CartWidget from '../cartWidget/CartWidget'
 
 const NavBar = () => {
     return (
@@ -19,6 +20,9 @@ const NavBar = () => {
                 </li>
                 <li>
                     <a href="#">Contacto</a>
+                </li>
+                <li>
+                    <CartWidget />
                 </li>
             </ul>
        </nav>
