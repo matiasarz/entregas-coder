@@ -1,4 +1,5 @@
 import './App.css';
+import Circle from './Circle';
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import NavBar from './components/navbar/NavBar';
 
