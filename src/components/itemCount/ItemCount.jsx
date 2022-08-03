@@ -3,7 +3,9 @@ import { AiFillMinusCircle } from 'react-icons/ai';
 import './itemCount.css'
 import { useState } from 'react';
 
-const ItemCount = ({initial, stock, imgUrl}) => {
+const ItemCount = ({ data }) => {
+
+    const { initial, stock } = data;
 
     const [count, setCount] = useState(1);
 
@@ -26,9 +28,9 @@ const ItemCount = ({initial, stock, imgUrl}) => {
         fontSize: '25px',
         color: '#38f',
     }
+
     return (
         <div className='cardContainer'>
-            <img src={imgUrl} alt="imagen remera" />
             <div className='counterContainer'>
                 <button onClick={handleIncrease}>
                     <BsFillPlusCircleFill style={buttonStyle}/>

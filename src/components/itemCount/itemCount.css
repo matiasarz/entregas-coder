@@ -1,6 +1,7 @@
 .counterContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 5px;
 }
 .counterContainer button {
@@ -9,7 +10,9 @@
     background: transparent;
 }
 .cardContainer {
-    width: 200px;
+    /* width: 100%;
+    padding: 8px;
+    border-top: 1px solid #bbb; */
 }
 .cardContainer .addCart {
     background-color: #fff;
@@ -26,9 +29,4 @@
 .cardContainer .addCart:active {
     background-color: #38f;
     color: #fff;
-}
-.cardContainer img {
-    object-fit: contain;
-    width: inherit;
-    height: 150px;
 }

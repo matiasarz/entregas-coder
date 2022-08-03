@@ -2,14 +2,9 @@
     width: 90%;
     margin: auto;
     margin-top: 50px;
-    height: 300px;
 }
 .mainContainer h1 {
     text-align: center;
     margin-bottom: 60px;
-}
-.mainContainer .productsContainer {
-    display: flex;
-    justify-content: space-evenly;
 }
 
