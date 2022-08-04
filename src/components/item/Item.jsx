@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import ItemCount from '../itemCount/ItemCount';
 import './item.css';
+import Title from './Title';
+
+
 
 
 const Item = ({ data }) => {
 
-    const { imgUrl, name, price } = data;
+    const { imgUrl, stock, price } = data;
 
     const [ pass, setPass ] = useState(false);
 
@@ -15,7 +18,7 @@ const Item = ({ data }) => {
     
     const handleMouseLeave = () => {
         setPass(false);
-    }
+    }    
 
     return (
         <>
@@ -29,10 +32,12 @@ const Item = ({ data }) => {
                 </div>
                 <div className='cardInfo'>
                     <h3>{price}</h3>
-                    <h5>{name}</h5>
+                    <h6>stock: {stock}</h6>
                 </div>
                 {
-                    pass ? <ItemCount data={data} /> : null
+                    pass ? <ItemCount data={data} /> : <Title data={data} />
+                    
+                    
                 }
             </div>
         </>
