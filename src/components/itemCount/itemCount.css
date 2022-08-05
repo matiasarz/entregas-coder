@@ -10,10 +10,12 @@
     cursor: pointer;
     background: transparent;
 }
-.cardContainer {
+.buttonContainer {
     padding: 0 10px;
+    position: absolute;
+    width: inherit;
 }
-.cardContainer .addCart {
+.buttonContainer .addCart {
     background-color: #fff;
     border: 2px solid #38f;
     border-radius: 5px;
@@ -25,7 +27,7 @@
     color: #38f;
     cursor: pointer;
 }
-.cardContainer .addCart:active {
+.buttonContainer .addCart:active {
     background-color: #38f;
     color: #fff;
 }

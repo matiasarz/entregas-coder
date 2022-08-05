@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { productData } from '../../data/data';
-import ItemCount from './../itemCount/ItemCount';
 import Item from '../item/Item';
 import './itemList.css';
 

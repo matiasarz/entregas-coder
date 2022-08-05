@@ -34,12 +34,14 @@
     align-items: center;
 }
 
-.hola {
+.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: inherit;
+    position: absolute;
 }
-.hola h5 {
+.title h5 {
     color: #666;
     padding: 0 15px;
     margin-top: 20px;

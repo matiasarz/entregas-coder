@@ -1,8 +1,8 @@
-const Title = ({ data }) => {
+const Title = ({ data, toggle }) => {
 
     const { name, size } = data;
     return (
-        <div className='hola'>
+        <div className='title' style={toggle}>
             <h5>{name}</h5>
             <h5>Talle: {size}</h5>
         </div>

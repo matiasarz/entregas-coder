@@ -34,11 +34,8 @@ const Item = ({ data }) => {
                     <h3>{price}</h3>
                     <h6>stock: {stock}</h6>
                 </div>
-                {
-                    pass ? <ItemCount data={data} /> : <Title data={data} />
-                    
-                    
-                }
+                <Title data={data} toggle={ pass ? { visibility: 'hidden' } : { visibility: 'visible' } }/>
+                <ItemCount data={data} toggle={ pass ? { visibility: 'visible' } : { visibility: 'hidden' } }/>
             </div>
         </>
     )
