@@ -1,14 +1,24 @@
-import { useState } from 'react';
 import ItemCount from '../itemCount/ItemCount';
 import './item.css';
 import Title from './Title';
+import { useState } from 'react';
 
 
 
 
-const Item = ({ data }) => {
+const Item = ({ data, setItemDetail, setMount, mount }) => {
 
     const { imgUrl, stock, price } = data;
+
+    const handleClick = () => {
+        setItemDetail(data);
+        if (!mount) {
+            setMount(true);
+        }      
+        else {
+            setMount(false);
+        }  
+    }
 
     const [ pass, setPass ] = useState(false);
 
@@ -27,8 +37,15 @@ const Item = ({ data }) => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className='cardImg'>
+                <div className='cardImg' >
                     <img src={imgUrl} alt="" />
+                    <button 
+                        className='buttonDetail' 
+                        style={pass ? { visibility: 'visible' } : { visibility: 'hidden' }}
+                        onClick={handleClick}
+                    >
+                        Ver detalle
+                    </button>
                 </div>
                 <div className='cardInfo'>
                     <h3>{price}</h3>

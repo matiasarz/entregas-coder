@@ -15,6 +15,27 @@
     width: 224px;
     height: 224px;
     text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .cardImg .buttonDetail {
+    position: absolute;
+    background-color: #fff;
+    border: 2px solid #38f;
+    background-color: #38f;
+    border-radius: 5px;
+    display: block;
+    padding: 8px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.card .cardImg .buttonDetail:hover {
+    color: #38f;
+    background-color: #fff;
 }
 .card .cardImg img {
     object-fit: contain;
