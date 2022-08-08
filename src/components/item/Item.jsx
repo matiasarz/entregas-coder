@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const Item = ({ data, setItemDetail, setMount, mount }) => {
 
-    const { imgUrl, stock, price } = data;
+    const { imgUrl, stock, price, name } = data;
 
     const handleClick = () => {
         setItemDetail(data);
@@ -38,7 +38,7 @@ const Item = ({ data, setItemDetail, setMount, mount }) => {
                 onMouseLeave={handleMouseLeave}
             >
                 <div className='cardImg' >
-                    <img src={imgUrl} alt="" />
+                    <img src={imgUrl} alt={name} />
                     <button 
                         className='buttonDetail' 
                         style={pass ? { visibility: 'visible' } : { visibility: 'hidden' }}
