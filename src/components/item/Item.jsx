@@ -2,23 +2,14 @@ import ItemCount from '../itemCount/ItemCount';
 import './item.css';
 import Title from './Title';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
 
-const Item = ({ data, setItemDetail, setMount, mount }) => {
+const Item = ({ data }) => {
 
-    const { imgUrl, stock, price, name } = data;
-
-    const handleClick = () => {
-        setItemDetail(data);
-        if (!mount) {
-            setMount(true);
-        }      
-        else {
-            setMount(false);
-        }  
-    }
+    const { imgUrl, stock, price, name, id } = data;
 
     const [ pass, setPass ] = useState(false);
 
@@ -39,13 +30,12 @@ const Item = ({ data, setItemDetail, setMount, mount }) => {
             >
                 <div className='cardImg' >
                     <img src={imgUrl} alt={name} />
-                    <button 
-                        className='buttonDetail' 
-                        style={pass ? { visibility: 'visible' } : { visibility: 'hidden' }}
-                        onClick={handleClick}
+                    <Link
+                        to={`/detalle/${id}`}
+                        className='buttonDetail' style={pass ? { visibility: 'visible' } : { visibility: 'hidden' }}
                     >
-                        Ver detalle
-                    </button>
+                        <button>Ver detalle</button>
+                    </Link>
                 </div>
                 <div className='cardInfo'>
                     <h3>{price}</h3>

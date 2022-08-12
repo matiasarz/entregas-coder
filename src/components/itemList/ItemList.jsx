@@ -1,7 +1,7 @@
 import Item from '../item/Item';
 import './itemList.css';
 
-const ItemList = ({ data, setItemDetail, setMount, mount }) => {
+const ItemList = ({ data }) => {
 
     return (
         <div className='itemListContainer'>      
@@ -11,9 +11,7 @@ const ItemList = ({ data, setItemDetail, setMount, mount }) => {
                         <Item 
                             data={item} 
                             key={item.id} 
-                            setItemDetail={setItemDetail}
-                            setMount={setMount}
-                            mount={mount}
+                            // setItemDetail={setItemDetail}
                         />
                     )
                 })

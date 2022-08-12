@@ -21,22 +21,30 @@
     align-items: center;
 }
 .card .cardImg .buttonDetail {
+    border: none;
     position: absolute;
-    background-color: #fff;
-    border: 2px solid #38f;
     background-color: #38f;
-    border-radius: 5px;
     display: block;
-    padding: 8px;
     font-weight: 600;
     text-align: center;
     color: #fff;
     cursor: pointer;
+    border: 2px solid #38f;
+    border-radius: 5px;
+    padding: 8px;
+}
+.card .cardImg .buttonDetail button {
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    font-weight: inherit;
+    cursor: inherit;
 }
 .card .cardImg .buttonDetail:hover {
-    color: #38f;
     background-color: #fff;
+    color: #38f;
 }
+
 .card .cardImg img {
     object-fit: contain;
     width: inherit;

@@ -1,27 +1,10 @@
 import './ItemListContainer.css';
 import ItemList from '../itemList/ItemList';
-import { useState, useEffect } from 'react';
+import useFecth from '../../hooks/useFecth';
 
-const getData = async () => {
-    const response = await fetch('http://localhost:3000/data.json');
-    return response;
-}
+const ItemListContainer = ({ text }) => {
 
-const ItemListContainer = ({ text, setItemDetail, setMount, mount }) => {
-
-    const [ data, setData ] = useState([]);
-
-    const [ loading, setLoading ] = useState(true);
-    
-    useEffect(() => {
-       setTimeout(() => {
-            getData()
-                .then(response => response.json())
-                .then(data => setData(data))
-                .catch(e => console.log(`Error: ${e}`))
-                .finally(setLoading(false));
-       }, 2000)
-    }, [])
+    const { data, loading } = useFecth('http://localhost:3000/data.json');
 
     const loadingStyle = {
         margin: '50px auto',
@@ -34,15 +17,10 @@ const ItemListContainer = ({ text, setItemDetail, setMount, mount }) => {
 
     return (
         <>
-            <main className="mainContainer">
-                <h1>{text}</h1>
-                <ItemList 
-                    data={data} 
-                    setItemDetail={setItemDetail}
-                    setMount={setMount}
-                    mount={mount}
-                />
-            </main>
+            <h1>{text}</h1>
+            <ItemList 
+                data={data} 
+            />  
         </>
     )
 }

@@ -1,17 +1,14 @@
+import { Link } from 'react-router-dom';
 import ItemCount from '../itemCount/ItemCount';
 import './itemDetail.css';
 
-const ItemDetail = ({ data, setMount }) => {
-
+const ItemDetail = ({ data }) => {
+    
     const { imgUrl, price, name, size, stock } = data;
 
-    const handleClick = () => {
-        setMount(true);
-    }
-
     return (
-        <div className="mainContainer">
-            <button onClick={handleClick} className='buttonBack'>Volver</button>
+        <>
+            <Link to='/' className='buttonBack'>Volver</Link>
             <div className="itemDetail">
                 <div className='itemDetailImg'>
                     <img src={imgUrl} alt={name} />
@@ -24,7 +21,7 @@ const ItemDetail = ({ data, setMount }) => {
                     <ItemCount data={data} className='itemDetailCount'/>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

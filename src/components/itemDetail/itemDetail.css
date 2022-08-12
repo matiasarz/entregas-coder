@@ -41,10 +41,12 @@
     border-radius: 5px;
     display: block;
     padding: 8px;
+    margin-bottom: 20px;
     font-weight: 600;
     text-align: center;
     color: #fff;
     cursor: pointer;
+    width: fit-content;
 }
 .buttonBack:hover {
     color: #38f;
