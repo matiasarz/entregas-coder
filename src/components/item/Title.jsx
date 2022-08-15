@@ -1,10 +1,9 @@
 const Title = ({ data, toggle }) => {
 
-    const { name, size } = data;
+    const { name } = data;
     return (
         <div className='title' style={toggle}>
             <h5>{name}</h5>
-            <h5>Talle: {size}</h5>
         </div>
     )
 }

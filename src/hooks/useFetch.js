@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
-const useFecth = (url) => {
+export const useFetch = (url) => {
 
     const [ data, setData ] = useState([]);
-    const [ loading, setLoading ] = useState(true);
+    const [ loading, setLoading ] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
         fetch(url)
             .then(response => response.json())
             .then(data => setData(data))
@@ -16,4 +17,4 @@ const useFecth = (url) => {
     return { data, loading }
 }
 
-export default useFecth
+

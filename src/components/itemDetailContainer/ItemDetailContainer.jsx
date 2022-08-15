@@ -1,15 +1,15 @@
 import { useParams } from "react-router-dom";
-import useFecth from "../../hooks/useFecth";
-import ItemDetail from '../itemDetail/ItemDetail'
+import { useFetch } from '../../hooks/useFetch';
+import ItemDetail from '../itemDetail/ItemDetail';
 
 
 const ItemDetailContainer = () => {
 
-    const { data, loading } = useFecth('http://localhost:3000/data.json');
+    const { data, loading } = useFetch('http://localhost:3000/dat.json')
 
-    let iD = useParams().id;
+    let { id } = useParams();
 
-    let selected = data.find(item => item.id == iD);
+    let selected = data.find(item => item.id == id);
 
     if (selected === undefined) {
       selected = {};

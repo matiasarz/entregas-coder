@@ -6,15 +6,7 @@ const ItemList = ({ data }) => {
     return (
         <div className='itemListContainer'>      
             {
-                data.map(item => {
-                    return (
-                        <Item 
-                            data={item} 
-                            key={item.id} 
-                            // setItemDetail={setItemDetail}
-                        />
-                    )
-                })
+                data.map(item => <Item data={item} key={item.id} />)
             }
         </div>
     )

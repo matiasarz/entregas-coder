@@ -1,22 +1,24 @@
 .itemDetail {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .itemDetail .itemDetailImg {
+    width: 400px;
+    height: 350px;
     text-align: center;
+    object-fit: contain;
 }
 .itemDetail .itemDetailImg img {
-    min-width: 350px;
-    min-height: 450px;
-    max-width: 400px;
-    max-height: 500px;
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
 }
 .itemDetail .itemDetailInfo {
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 20px;
-    min-width: 350px;
-    max-width: 400px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -31,7 +33,7 @@
 }
 .itemDetail .itemDetailInfo .buttonContainer {
     position: relative;
-    width: 60%;
+    width: 80%;
     align-self: center;
 }
 .buttonBack {

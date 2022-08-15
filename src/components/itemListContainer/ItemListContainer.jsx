@@ -1,10 +1,10 @@
 import './ItemListContainer.css';
 import ItemList from '../itemList/ItemList';
-import useFecth from '../../hooks/useFecth';
+import { useFetch } from '../../hooks/useFetch';
 
 const ItemListContainer = ({ text }) => {
 
-    const { data, loading } = useFecth('http://localhost:3000/data.json');
+    const { data, loading } = useFetch('http://localhost:3000/dat.json');
 
     const loadingStyle = {
         margin: '50px auto',
@@ -18,9 +18,7 @@ const ItemListContainer = ({ text }) => {
     return (
         <>
             <h1>{text}</h1>
-            <ItemList 
-                data={data} 
-            />  
+            <ItemList data={data} />  
         </>
     )
 }
