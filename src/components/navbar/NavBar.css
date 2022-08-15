@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    background: linear-gradient(to top, #ccc, #fff);
+    background: #04af04;
 }
 .nav div {
     flex-grow: .5;
@@ -18,15 +18,15 @@
     flex-grow: 3;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
 }
 .navBar .link {
     text-align: center;
-    font-size: 1.1em;
-    color: #000;
-    text-decoration: underline 2px;
+    font-size: .9em;
+    color: #fff;
+    transition: color .5s;
 }
 .navBar .link:hover {
-    color: #888;
-    /* text-decoration: underline 2px #000; */
+    color: #000;
+    transition: color .5s;
 }

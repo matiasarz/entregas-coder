@@ -4,6 +4,13 @@ import CartWidget from '../cartWidget/CartWidget'
 import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
+
+    const activeStyle = {
+        color: "#000"
+    }
+
+    const handleStyle = ({ isActive }) => isActive ? activeStyle : undefined;
+
     return (
        <header>
             <nav className='nav'>
@@ -11,11 +18,13 @@ const NavBar = () => {
                     <img src={logo} alt="Logo de sonrisa" />
                 </div>
                 <ul className='navBar'>
-                    <NavLink to='/' className='link'>Inicio</NavLink>
-                    <NavLink to='/galeria' className='link'>Galeria</NavLink>
-                    <NavLink to='/faq' className='link'>Faq</NavLink>
-                    <NavLink to='/contacto' className='link'>Contacto</NavLink>
-                    <NavLink to='/carrito' className='link'>
+                    <NavLink to='/' className='link'style={handleStyle}>Inicio</NavLink>
+                    <NavLink to='/belleza' className='link' style={handleStyle}>Belleza</NavLink>
+                    <NavLink to='/electrodomesticos' className='link' style={handleStyle}>Electrodomésticos</NavLink>
+                    <NavLink to='/indumentaria' className='link' style={handleStyle}>Indumentaria</NavLink>
+                    <NavLink to='/tecnologia' className='link' style={handleStyle}>Tecnología</NavLink>
+                    <NavLink to='/muebles' className='link' style={handleStyle}>Muebles</NavLink>
+                    <NavLink to='/' className='link'>
                         <CartWidget />
                     </NavLink>
                 </ul>

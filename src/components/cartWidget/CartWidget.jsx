@@ -3,8 +3,8 @@ import { FaShoppingCart } from 'react-icons/fa';
 const CartWidget = () => {
 
     const cartStyle = {
-        fontSize: '25px',
-        color: '#000',
+        fontSize: '22px',
+        color: '#fff',
         cursor: 'pointer'
     }
 

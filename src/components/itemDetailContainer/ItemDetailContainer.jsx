@@ -5,7 +5,7 @@ import ItemDetail from '../itemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
 
-    const { data, loading } = useFetch('http://localhost:3000/dat.json')
+    const { data, loading } = useFetch('http://localhost:3000/dat.json');
 
     let { id } = useParams();
 

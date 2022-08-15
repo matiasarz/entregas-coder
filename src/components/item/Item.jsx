@@ -13,13 +13,16 @@ const Item = ({ data }) => {
 
     const [ pass, setPass ] = useState(false);
 
-    const handleMouseEnter = () => {
-        setPass(true);
-    }
+    const handleMouseEnter = () => setPass(true);
     
-    const handleMouseLeave = () => {
-        setPass(false);
-    }    
+    const handleMouseLeave = () => setPass(false);
+    
+    const toggleOff = {
+        visibility: 'hidden'
+    }
+    const toggleOn = {
+        visibility: 'visible'
+    }
 
     return (
         <>
@@ -32,7 +35,7 @@ const Item = ({ data }) => {
                     <img src={imgUrl} alt={name} />
                     <Link
                         to={`/detalle/${id}`}
-                        className='buttonDetail' style={pass ? { visibility: 'visible' } : { visibility: 'hidden' }}
+                        className='buttonDetail' style={pass ? toggleOn : toggleOff}
                     >
                         <button>Ver detalle</button>
                     </Link>
@@ -41,8 +44,8 @@ const Item = ({ data }) => {
                     <h3>{price}</h3>
                     <h6>stock: {stock}</h6>
                 </div>
-                <Title data={data} toggle={ pass ? { visibility: 'hidden' } : { visibility: 'visible' } }/>
-                <ItemCount data={data} toggle={ pass ? { visibility: 'visible' } : { visibility: 'hidden' } }/>
+                <Title data={data} toggle={pass ? toggleOff : toggleOn}/>
+                <ItemCount data={data} toggle={pass ? toggleOn : toggleOff}/>
             </div>
         </>
     )
