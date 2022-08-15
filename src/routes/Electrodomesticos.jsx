@@ -1,18 +1,18 @@
+import { useEffect } from "react";
 import Item from "../components/item/Item";
-import { useFetch } from "../hooks/useFetch";
+import { useSearchCategory } from "../hooks/useSearchCategory";
 
-const Electrodomesticos = ({ title }) => {
+const Electrodomesticos = ({ title, setCategory }) => {
 
-    const { data } = useFetch('http://localhost:3000/dat.json');
-
-    let selected = data.filter(item => item.category === 'electrodomesticos');
+    const { category, filter } = useSearchCategory('http://localhost:3000/dat.json','electrodomesticos');
+    useEffect(() => setCategory(filter), [])
 
     return (
         <>
             <h2>{title}</h2>
             <div className="itemListContainer">
                 {
-                    selected.map(item => <Item key={item.id} data={item} />)
+                    category.map(item => <Item key={item.id} data={item} />)
                 }
             </div>
         </>        
