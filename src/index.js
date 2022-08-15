@@ -19,11 +19,11 @@ root.render(
         <Route path='/' element={<App />}>
           <Route index element={<Inicio />} />
           <Route path='detalle/:id' element={<Detail />} />
-          <Route path='belleza' element={<Belleza />} />
-          <Route path='electrodomesticos' element={<Electrodomesticos />} />
-          <Route path='indumentaria' element={<Indumentaria />} />
-          <Route path='muebles' element={<Muebles />} />
-          <Route path='tecnologia' element={<Tecnologia />} />
+          <Route path='belleza' element={<Belleza title='Belleza' />} />
+          <Route path='electrodomesticos' element={<Electrodomesticos title='Electrodomésticos' />} />
+          <Route path='indumentaria' element={<Indumentaria title='Indumentaria' />} />
+          <Route path='muebles' element={<Muebles title='Muebles' />} />
+          <Route path='tecnologia' element={<Tecnologia title='Tecnología' />} />
         </Route>
       </Routes>
     </BrowserRouter>

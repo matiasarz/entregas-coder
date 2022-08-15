@@ -6,7 +6,8 @@ import { NavLink } from 'react-router-dom'
 const NavBar = () => {
 
     const activeStyle = {
-        color: "#000"
+        color: "#000",
+        fontSize: '.95em',
     }
 
     const handleStyle = ({ isActive }) => isActive ? activeStyle : undefined;
