@@ -10,8 +10,8 @@
     object-fit: contain;
 }
 .itemDetail .itemDetailImg img {
-    width: inherit;
-    height: inherit;
+    width: 400px;
+    height: 350px;
     object-fit: contain;
 }
 .itemDetail .itemDetailInfo {

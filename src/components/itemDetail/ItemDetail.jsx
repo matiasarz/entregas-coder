@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import ButtonComprar from '../cartFinalizar/ButtonComprar';
 import ItemCount from '../itemCount/ItemCount';
 import './itemDetail.css';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+import Componente from '../componenteImg/Componente';
 
 const ItemDetail = ({ data }) => {
     
@@ -24,7 +27,11 @@ const ItemDetail = ({ data }) => {
             <Link to='/' className='buttonBack'>Volver</Link>
             <div className="itemDetail">
                 <div className='itemDetailImg'>
-                    <img src={imgUrl} alt={name} />
+                {/* <img src={imgUrl} alt={name} /> */}
+                    {/* <Zoom>
+                        <img src={imgUrl} alt={name} width='0'/>
+                    </Zoom> */}
+                    <Componente src={imgUrl} />
                 </div>
                 <div className="itemDetailInfo">
                     <h1>{name}</h1>
