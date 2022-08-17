@@ -1,0 +1,28 @@
+.buttonComprar {
+    background-color: #fff;
+    border: 2px solid #38f;
+    background-color: #38f;
+    border-radius: 5px;
+    display: block;
+    padding: 8px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.itemDetailInfo p {
+    margin: 7px;
+}
+.selectButton {
+    border: none;
+    margin-left: 10px;
+    font-size: 1em;
+}
+.selectButton option {
+    width: 100%;
+}
+.textoStock span {
+    font-size: .9em;
+    color: #aaa;
+    margin-left: 5px;
+}

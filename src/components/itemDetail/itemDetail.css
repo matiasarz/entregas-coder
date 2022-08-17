@@ -23,9 +23,8 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-.itemDetail .itemDetailInfo span {
+.itemDetail .itemDetailInfo p {
     margin: 7px;
-    font-weight: 600;
 }
 .itemDetail .itemDetailInfo h2 {
     font-weight: 500;

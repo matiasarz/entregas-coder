@@ -1,10 +1,23 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ButtonComprar from '../cartFinalizar/ButtonComprar';
 import ItemCount from '../itemCount/ItemCount';
 import './itemDetail.css';
 
 const ItemDetail = ({ data }) => {
     
-    const { imgUrl, price, name, size, stock } = data;
+    const { imgUrl, price, name, stock } = data;
+
+    const [ stateAdd , setStateAdd ] = useState('');
+    const [ stateToggle , setStateToggle ] = useState(true);
+
+    const onAdd = (count,data) => {
+        setStateAdd({
+            ...data,
+            count
+        })
+        setStateToggle(false);
+    }
 
     return (
         <>
@@ -16,9 +29,16 @@ const ItemDetail = ({ data }) => {
                 <div className="itemDetailInfo">
                     <h1>{name}</h1>
                     <h2>{price}</h2>
-                    <span>Talle disponible: {size}</span>
-                    <span>Stock: {stock}</span>
-                    <ItemCount data={data} className='itemDetailCount'/>
+                    <p>Descripción: </p>
+                    <p>Stock: <b>{stock}</b></p>
+                    {
+                        stateToggle ? <ItemCount 
+                                        data={data} 
+                                        onAdd={onAdd} 
+                                    />
+                                    :
+                                    <ButtonComprar stateAdd={stateAdd} />
+                    }
                 </div>
             </div>
         </>

@@ -45,7 +45,10 @@ const Item = ({ data }) => {
                     <h6>stock: {stock}</h6>
                 </div>
                 <Title data={data} toggle={pass ? toggleOff : toggleOn}/>
-                <ItemCount data={data} toggle={pass ? toggleOn : toggleOff}/>
+                <ItemCount 
+                    data={data} 
+                    toggle={pass ? toggleOn : toggleOff} 
+                />
             </div>
         </>
     )
