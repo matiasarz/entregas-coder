@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
     const { data, loading } = useFetch('http://localhost:3000/dat.json');
 
     let { id } = useParams();
-
+    
     let selected = data.find(item => item.id == id);
 
     if (selected === undefined) {

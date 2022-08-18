@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ data }) => {
 
-    const { imgUrl, stock, price, name, id } = data;
+    const { imgUrl, stock, price, name, id, category } = data;
 
     const [ pass, setPass ] = useState(false);
 
@@ -34,7 +34,7 @@ const Item = ({ data }) => {
                 <div className='cardImg' >
                     <img src={imgUrl} alt={name} />
                     <Link
-                        to={`detalle/${id}`}
+                        to={`/${category}/detalle/${id}`}
                         className='buttonDetail' style={pass ? toggleOn : toggleOff}
                     >
                         <button>Ver detalle</button>
