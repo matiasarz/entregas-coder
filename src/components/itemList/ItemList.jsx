@@ -6,7 +6,7 @@ const ItemList = ({ data }) => {
     return (
         <div className='itemListContainer'>      
             {
-                data.map(item => <Item data={item} key={item.id} />)
+                data.map(item => <Item data={item} key={item.id} to={`/detalle/${item.id}`} />)
             }
         </div>
     )

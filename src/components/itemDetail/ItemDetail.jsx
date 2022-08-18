@@ -6,24 +6,24 @@ import './itemDetail.css';
 import 'react-medium-image-zoom/dist/styles.css'
 import Componente from '../componenteImg/Componente';
 
-const ItemDetail = ({ data }) => {
+const ItemDetail = ({ data, to }) => {
     
-    const { imgUrl, price, name, stock, category } = data;
+    const { imgUrl, price, name, stock } = data;
 
     const [ stateAdd , setStateAdd ] = useState('');
-    const [ stateToggle , setStateToggle ] = useState(true);
+    const [ statePass , setStatePass ] = useState(true);
 
     const onAdd = (count,data) => {
         setStateAdd({
             ...data,
             count
         })
-        setStateToggle(false);
+        setStatePass(false);
     }
 
     return (
         <>
-            <Link to={`/${category}`} className='buttonBack'>Volver</Link>
+            <Link to={to} className='buttonBack'>Volver</Link>
             <div className="itemDetail">
                 <div className='itemDetailImg'>
                     <Componente src={imgUrl} />
@@ -34,7 +34,7 @@ const ItemDetail = ({ data }) => {
                     <p>Descripción: </p>
                     <p>Stock: <b>{stock}</b></p>
                     {
-                        stateToggle ? <ItemCount 
+                        statePass ? <ItemCount 
                                         data={data} 
                                         onAdd={onAdd} 
                                     />

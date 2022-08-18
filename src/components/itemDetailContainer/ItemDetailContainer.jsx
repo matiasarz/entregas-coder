@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-          <ItemDetail data={selected}/> 
+          <ItemDetail data={selected} to={`/${selected.category}`}/> 
         </>
     )
 }

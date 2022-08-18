@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 
 
-const Item = ({ data }) => {
+const Item = ({ data, to }) => {
 
-    const { imgUrl, stock, price, name, id, category } = data;
+    const { imgUrl, stock, price, name } = data;
 
     const [ pass, setPass ] = useState(false);
 
@@ -24,6 +24,10 @@ const Item = ({ data }) => {
         visibility: 'visible'
     }
 
+    const onAdd = () => {
+        <Link to={to}>hola</Link>
+    }
+
     return (
         <>
             <div 
@@ -34,7 +38,7 @@ const Item = ({ data }) => {
                 <div className='cardImg' >
                     <img src={imgUrl} alt={name} />
                     <Link
-                        to={`/${category}/detalle/${id}`}
+                        to={to}
                         className='buttonDetail' style={pass ? toggleOn : toggleOff}
                     >
                         <button>Ver detalle</button>
@@ -48,6 +52,7 @@ const Item = ({ data }) => {
                 <ItemCount 
                     data={data} 
                     toggle={pass ? toggleOn : toggleOff} 
+                    onAdd={onAdd}
                 />
             </div>
         </>

@@ -12,7 +12,7 @@ const Indumentaria = ({ title, setCategory }) => {
             <h2>{title}</h2>
             <div className="itemListContainer">
                 {
-                    category.map(item => <Item key={item.id} data={item} />)
+                    category.map(item => <Item key={item.id} data={item} to={`/${filter}/detalle/${item.id}`} />)
                 }
             </div>
         </>

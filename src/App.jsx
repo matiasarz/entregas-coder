@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NavBar from './components/navbar/NavBar';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -10,13 +10,11 @@ import Electrodomesticos from './routes/Electrodomesticos';
 import Indumentaria from './routes/Indumentaria';
 import Muebles from './routes/Muebles';
 import Tecnologia from './routes/Tecnologia';
-import { useFetch } from './hooks/useFetch';
+import Cart from './routes/Cart';
 
 function App() {
 
     const [ category, setCategory ] = useState('');
-
-    useEffect(() => console.log(category), [category]);
 
     return (
         <>
@@ -24,13 +22,13 @@ function App() {
                 <NavBar />
                 <main className='mainContainer'>
                     <Routes>
-                        <Route path={`/`} element={<Inicio setCategory={setCategory}/>} />
-                        {/* <Route 
+                        <Route path={`/`} element={<Inicio />} />
+                        <Route 
                             path={`/detalle/:id`} 
                             element={<Detail />} 
-                        /> */}
+                        />
                         <Route 
-                            path={`${category}/detalle/:id`} 
+                            path={`/${category}/detalle/:id`} 
                             element={<Detail />} 
                         />
                         <Route 
@@ -54,6 +52,7 @@ function App() {
                             path='/tecnologia' 
                             element={<Tecnologia title='Tecnología' setCategory={setCategory} />} 
                         />
+                        <Route path='/cart' element={<Cart />} />
                     </Routes>
                 </main>
             </BrowserRouter>
