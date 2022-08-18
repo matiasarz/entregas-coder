@@ -25,7 +25,7 @@ const NavBar = () => {
                     <NavLink to='/indumentaria' className='link' style={handleStyle}>Indumentaria</NavLink>
                     <NavLink to='/tecnologia' className='link' style={handleStyle}>Tecnología</NavLink>
                     <NavLink to='/muebles' className='link' style={handleStyle}>Muebles</NavLink>
-                    <NavLink to='/' className='link'>
+                    <NavLink to='/cart' className='link'>
                         <CartWidget />
                     </NavLink>
                 </ul>

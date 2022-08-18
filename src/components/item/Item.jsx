@@ -1,11 +1,7 @@
-import ItemCount from '../itemCount/ItemCount';
 import './item.css';
 import Title from './Title';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-
-
 
 const Item = ({ data, to }) => {
 
@@ -22,10 +18,6 @@ const Item = ({ data, to }) => {
     }
     const toggleOn = {
         visibility: 'visible'
-    }
-
-    const onAdd = () => {
-        <Link to={to}>hola</Link>
     }
 
     return (
@@ -49,14 +41,15 @@ const Item = ({ data, to }) => {
                     <h6>stock: {stock}</h6>
                 </div>
                 <Title data={data} toggle={pass ? toggleOff : toggleOn}/>
-                <ItemCount 
-                    data={data} 
-                    toggle={pass ? toggleOn : toggleOff} 
-                    onAdd={onAdd}
-                />
+                <Link to={to} style={pass ? toggleOn : toggleOff} className='buttonAgregarCarrito'>
+                    <button>
+                        Agregar a carrito
+                    </button>
+                </Link>
             </div>
         </>
     )
 }
 
 export default Item
+

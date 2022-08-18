@@ -25,7 +25,6 @@ const ItemCount = ({ data, toggle, onAdd }) => {
         color: '#38f',
     }
 
-
     return (
         <div className='buttonContainer' style={toggle}>
             <div className='counterContainer'>
