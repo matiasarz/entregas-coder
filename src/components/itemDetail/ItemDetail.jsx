@@ -26,7 +26,7 @@ const ItemDetail = ({ data, to }) => {
             <Link to={to} className='buttonBack'>Volver</Link>
             <div className="itemDetail">
                 <div className='itemDetailImg'>
-                    <Componente src={imgUrl} />
+                    <Componente src={imgUrl} alt={name}/>
                 </div>
                 <div className="itemDetailInfo">
                     <h1>{name}</h1>

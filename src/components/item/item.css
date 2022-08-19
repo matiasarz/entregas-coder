@@ -1,24 +1,29 @@
 .card {
     width: 224px;
     height: 360px;
-    box-shadow: 0px 2px 10px #ccc;
-    border-radius: 8px;
+    border-radius: 4px;
     transition: transform .3s;
-    margin: 50px 10px;
+    margin: 50px 3px;
+    background-color: #fff;
 }
 .card:hover {
     transform: scale(1.02);
     transition: transform .5s;
-    box-shadow: 0px 5px 8px #777;
+    box-shadow: 0 0 15px #888;
 }
 .card .cardImg {
     width: 224px;
     height: 224px;
-    text-align: center;
-    position: relative;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid blue;
+}
+.cardImg .miImg {
+    width: 204px;
+    height: 204px;
+    object-fit: contain;
 }
 .card .cardImg .buttonDetail {
     border: none;
@@ -44,35 +49,24 @@
     background-color: #fff;
     color: #38f;
 }
-
-.card .cardImg img {
-    object-fit: contain;
-    width: inherit;
-    height: inherit;
-}
-.card .cardInfo h3, h6 {
-    padding-left: 20px;
-    padding-right: 7px;
-    padding-top: 10px;
-    margin: 7px;
-}
 .card .cardInfo {
     border-top: 1px solid #aaa;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
-
+.card .cardInfo h2 {
+    font-family: 'Lato', sans-serif;
+    margin-top: 6px;
+}
 .title {
     width: inherit;
     position: absolute;
 }
 .title h5 {
-    color: #666;
     padding: 0 15px;
     margin-top: 20px;
     font-size: .9em;
     text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 .card .buttonAgregarCarrito {
     background-color: #38f;

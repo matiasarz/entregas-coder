@@ -28,7 +28,7 @@ const Item = ({ data, to }) => {
                 onMouseLeave={handleMouseLeave}
             >
                 <div className='cardImg' >
-                    <img src={imgUrl} alt={name} />
+                    <img src={imgUrl} alt={name} className='miImg'/>
                     <Link
                         to={to}
                         className='buttonDetail' style={pass ? toggleOn : toggleOff}
@@ -37,8 +37,8 @@ const Item = ({ data, to }) => {
                     </Link>
                 </div>
                 <div className='cardInfo'>
-                    <h3>{price}</h3>
-                    <h6>stock: {stock}</h6>
+                    {/* <h6>stock<p>{stock}</p></h6> */}
+                    <h2>{price}</h2>
                 </div>
                 <Title data={data} toggle={pass ? toggleOff : toggleOn}/>
                 <Link to={to} style={pass ? toggleOn : toggleOff} className='buttonAgregarCarrito'>

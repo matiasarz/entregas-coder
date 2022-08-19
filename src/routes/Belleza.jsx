@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Item from "../components/item/Item";
 import { useSearchCategory } from "../hooks/useSearchCategory";
+import '../css-routes/styles.css';
 
 const Belleza = ({ title, setCategory }) => {
 
@@ -8,14 +9,14 @@ const Belleza = ({ title, setCategory }) => {
     useEffect(() => setCategory(filter), []);
 
     return (
-        <>
-            <h2>{title}</h2>
+        <section className="sectionContainer">
+            <h1 className="sectionTitle">{title}</h1>
             <div className="itemListContainer">
                 {
                     category.map(item => <Item key={item.id} data={item} to={`/${filter}/detalle/${item.id}`} />)
                 }
             </div>
-        </>
+        </section>
     )
 }
 

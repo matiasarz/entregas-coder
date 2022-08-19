@@ -17,7 +17,7 @@ const ItemListContainer = ({ text }) => {
 
     return (
         <>
-            <h1>{text}</h1>
+            <h1 className='sectionTitle'>{text}</h1>
             <ItemList data={data} />  
         </>
     )

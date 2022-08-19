@@ -6,6 +6,9 @@
   list-style: none;
   font-family: sans-serif;
 }
+body {
+  background-color: #ebebeb;
+}
 a {
   color: #000;
 }
