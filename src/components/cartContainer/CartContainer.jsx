@@ -5,12 +5,12 @@ import './CartContainer.css';
 
 const CartContainer = () => {
 
-    const { productAdd } = useContext(cartContextProvider);
+    const { productAdd, filtrados } = useContext(cartContextProvider);
 
     return (
         <div className='cartContainer'>   
             {
-                productAdd.map(item => <CartItem key={item.id} data={item} />)
+                productAdd.map(item => <CartItem key={item.id} data={item} filter={filtrados} />)
             }
         </div>
     )

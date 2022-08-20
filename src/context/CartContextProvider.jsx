@@ -6,8 +6,6 @@ const CartContextProvider = ({ children }) => {
 
     const [ productAdd, setProductAdd ] = useState([]);
 
-    console.log(productAdd);
-
     const duplicados = (product,id,count) => {
         if (productAdd.some(item => item.id === id)) {
             let objectSelected = productAdd.find(item => item.id === id)
@@ -18,8 +16,12 @@ const CartContextProvider = ({ children }) => {
         }
     }
 
+    const filtrados = (id) => {
+        setProductAdd(productAdd.filter(item => item.id !== id));
+    }
+
     return (
-        <cartContextProvider.Provider value={{ duplicados, productAdd }}>
+        <cartContextProvider.Provider value={{ duplicados, productAdd, filtrados }}>
             {children}
         </cartContextProvider.Provider>
     )
