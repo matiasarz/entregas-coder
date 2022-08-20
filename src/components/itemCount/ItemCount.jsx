@@ -1,9 +1,9 @@
-import { BsFillPlusCircleFill } from 'react-icons/bs';
-import { AiFillMinusCircle } from 'react-icons/ai';
+// import { BsFillPlusCircleFill } from 'react-icons/bs';
+// import { BsFillDashCircleFill } from 'react-icons/bs';
 import './itemCount.css'
 import { useState } from 'react';
 
-const ItemCount = ({ data, toggle, onAdd }) => {
+const ItemCount = ({ data, toggle, onAdd, plus, minus, statePass, styleContainer }) => {
 
     const { initial, stock } = data;
 
@@ -20,28 +20,26 @@ const ItemCount = ({ data, toggle, onAdd }) => {
         }
     }
 
-    const buttonStyle = {
-        fontSize: '25px',
-        color: '#38f',
-    }
-
     return (
-        <div className='buttonContainer' style={toggle}>
+        <div className={styleContainer} style={toggle}>
             <div className='counterContainer'>
                 <button onClick={handleIncrease}>
-                    <BsFillPlusCircleFill style={buttonStyle}/>
+                    {plus}
                 </button>
                 <h3>{count}</h3>
                 <button onClick={handleDecrease}>
-                    <AiFillMinusCircle style={buttonStyle}/>
+                    {minus}
                 </button>
             </div>
-            <button 
-                className='addCart' 
-                onClick={() => onAdd(count,data)}
-            >
-                Agregar a carrito
-            </button>
+            {
+                statePass  ? <button 
+                                className='addCart' 
+                                onClick={() => onAdd(count,data)}
+                            >
+                                Agregar a carrito
+                            </button> 
+                        : null
+            }
         </div>
     )
 }

@@ -1,10 +1,10 @@
 .counterContainer {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     padding: 7px;
 }
-
 .counterContainer button {
     border: none;
     cursor: pointer;
@@ -14,6 +14,11 @@
     padding: 0 10px;
     position: absolute;
     width: inherit;
+}
+.cartItem {
+    position: relative;
+    border: 1px solid #888;
+    width: 100px;
 }
 .buttonContainer .addCart {
     background-color: #fff;

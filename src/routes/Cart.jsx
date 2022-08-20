@@ -1,8 +1,21 @@
+import CartContainer from "../components/cartContainer/CartContainer";
+import { useContext } from 'react';
+import { cartContextProvider } from "../context/CartContextProvider";
+import '../css-routes/styles.css';
+
 const Cart = () => {
+
+    const { productAdd } = useContext(cartContextProvider);
+
     return (
-        <div>
-            <h1>Cart Vacio</h1>
-        </div>
+        <section className="sectionContainer">
+            <h1 className="titleSection">
+                {
+                    productAdd.length === 0 ? 'Cart Vacio' : 'Productos Agregados'
+                }
+            </h1>
+            <CartContainer />
+        </section>
     )
 }
 

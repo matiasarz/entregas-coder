@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ data, to }) => {
 
-    const { imgUrl, stock, price, name } = data;
+    const { imgUrl, price, name } = data;
 
     const [ pass, setPass ] = useState(false);
 
@@ -37,15 +37,14 @@ const Item = ({ data, to }) => {
                     </Link>
                 </div>
                 <div className='cardInfo'>
-                    {/* <h6>stock<p>{stock}</p></h6> */}
-                    <h2>{price}</h2>
+                    <h2>${price}</h2>
                 </div>
                 <Title data={data} toggle={pass ? toggleOff : toggleOn}/>
-                <Link to={to} style={pass ? toggleOn : toggleOff} className='buttonAgregarCarrito'>
+                {/* <Link to={to} style={pass ? toggleOn : toggleOff} className='buttonAgregarCarrito'>
                     <button>
                         Agregar a carrito
                     </button>
-                </Link>
+                </Link> */}
             </div>
         </>
     )

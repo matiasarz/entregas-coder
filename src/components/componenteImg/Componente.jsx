@@ -14,6 +14,7 @@ const Componente = ({ src, alt }) => {
       <img
         src={src}
         alt={alt}
+        className='imgDetail'
       />
     </ControlledZoom>
   )

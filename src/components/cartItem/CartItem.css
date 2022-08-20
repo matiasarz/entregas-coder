@@ -1,0 +1,20 @@
+.cartList {
+    display: grid;
+    grid-template-rows: 150px;
+    grid-template-columns: 150px 1fr 150px 220px;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    background-color: #fff;
+    margin: 5px auto;
+}
+.cartItemImg {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.cartList p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+}
