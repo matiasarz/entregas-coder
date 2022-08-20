@@ -1,29 +1,25 @@
 import { useState } from 'react';
 import './CartItem.css';
-import { AiOutlinePlus } from 'react-icons/ai';
-import { AiOutlineMinus } from 'react-icons/ai';
-import ItemCount from '../itemCount/ItemCount';
+import CartCount from '../cartCount/CartCount';
 
 const CartItem = ({ data }) => {
     
-    const { imgUrl, name, count, price } = data;
+    const { imgUrl, name, count, price, stock } = data;
 
-    const buttonStyle = {
-        fontSize: '20px',
-        color: '#38f',
-    }
+    const [ counter, setCounter ] = useState(count);
 
     return (
         <div className='cartList'>
             <img src={imgUrl} alt={name} className='cartItemImg'/>
             <p>{name}</p>
-            <ItemCount 
-                data={data}
-                plus={<AiOutlinePlus style={buttonStyle}/>}
-                minus={<AiOutlineMinus style={buttonStyle}/>} 
-                styleContainer='cartItem'
+            <CartCount 
+                count={counter} 
+                setCounter={setCounter} 
+                stock={stock} 
+                initial={1} 
+                price={price}
             />
-            <p>Total: ${price * count}</p>
+            <p>Total: ${counter * price}</p>
         </div>
     )
 }

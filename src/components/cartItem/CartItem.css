@@ -1,7 +1,7 @@
 .cartList {
     display: grid;
     grid-template-rows: 150px;
-    grid-template-columns: 150px 1fr 150px 220px;
+    grid-template-columns: 150px 1fr 150px .7fr;
     align-items: center;
     justify-items: center;
     padding: 10px;

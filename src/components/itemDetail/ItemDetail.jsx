@@ -6,8 +6,6 @@ import './itemDetail.css';
 import 'react-medium-image-zoom/dist/styles.css';
 import Componente from '../componenteImg/Componente';
 import { cartContextProvider } from '../../context/CartContextProvider';
-import { BsFillPlusCircleFill } from 'react-icons/bs';
-import { BsFillDashCircleFill } from 'react-icons/bs';
 
 const ItemDetail = ({ data, to }) => {
 
@@ -48,10 +46,9 @@ const ItemDetail = ({ data, to }) => {
                         statePass ? <ItemCount 
                                         data={data} 
                                         onAdd={onAdd}
-                                        plus={<BsFillPlusCircleFill style={buttonStyle}/>}
-                                        minus={<BsFillDashCircleFill style={buttonStyle}/>}
-                                        statePass={statePass}
                                         styleContainer='buttonContainer'
+                                        buttonStyle={buttonStyle}
+                                        statePass={statePass}
                                     />
                                     :
                                     <ButtonComprar productDetail={productDetail} />

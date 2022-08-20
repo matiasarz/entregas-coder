@@ -11,7 +11,7 @@ const Cart = () => {
         <section className="sectionContainer">
             <h1 className="titleSection">
                 {
-                    productAdd.length === 0 ? 'Cart Vacio' : 'Productos Agregados'
+                    productAdd.length === 0 ? 'Cart Vacio' : 'Productos agregados'
                 }
             </h1>
             <CartContainer />

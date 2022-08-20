@@ -1,9 +1,9 @@
-// import { BsFillPlusCircleFill } from 'react-icons/bs';
-// import { BsFillDashCircleFill } from 'react-icons/bs';
+import { BsFillPlusCircleFill } from 'react-icons/bs';
+import { BsFillDashCircleFill } from 'react-icons/bs';
 import './itemCount.css'
 import { useState } from 'react';
 
-const ItemCount = ({ data, toggle, onAdd, plus, minus, statePass, styleContainer }) => {
+const ItemCount = ({ data, toggle, onAdd, styleContainer, buttonStyle, statePass }) => {
 
     const { initial, stock } = data;
 
@@ -24,11 +24,11 @@ const ItemCount = ({ data, toggle, onAdd, plus, minus, statePass, styleContainer
         <div className={styleContainer} style={toggle}>
             <div className='counterContainer'>
                 <button onClick={handleIncrease}>
-                    {plus}
+                    <BsFillPlusCircleFill style={buttonStyle} />
                 </button>
                 <h3>{count}</h3>
                 <button onClick={handleDecrease}>
-                    {minus}
+                    <BsFillDashCircleFill style={buttonStyle} />
                 </button>
             </div>
             {
