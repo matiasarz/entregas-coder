@@ -11,7 +11,7 @@ const Cart = () => {
     return (
         <section className="sectionContainer">
             {
-                productAdd.length && <Link to='/' className='buttonBack'>Catálogo</Link>
+                productAdd.length ? null : <Link to='/' className='buttonBack'>Catálogo</Link>
             }
             <h1 className="titleSection">
                 {
