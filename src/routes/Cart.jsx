@@ -1,5 +1,6 @@
 import CartContainer from "../components/cartContainer/CartContainer";
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { cartContextProvider } from "../context/CartContextProvider";
 import '../css-routes/styles.css';
 
@@ -9,9 +10,12 @@ const Cart = () => {
 
     return (
         <section className="sectionContainer">
+            {
+                productAdd.length && <Link to='/' className='buttonBack'>Catálogo</Link>
+            }
             <h1 className="titleSection">
                 {
-                    productAdd.length === 0 ? 'Cart Vacio' : 'Productos agregados'
+                    productAdd.length === 0 ? 'Cart vacio' : 'Productos agregados'
                 }
             </h1>
             <CartContainer />
