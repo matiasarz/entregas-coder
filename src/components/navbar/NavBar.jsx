@@ -13,7 +13,7 @@ const NavBar = () => {
     const handleStyle = ({ isActive }) => isActive ? activeStyle : undefined;
 
     return (
-       <header>
+       <header className='navContainer'>
             <nav className='nav'>
                 <div>
                     <img src={logo} alt="Logo de sonrisa" />
