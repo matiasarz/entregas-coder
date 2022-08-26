@@ -10,7 +10,11 @@ const CartContainer = () => {
     return (
         <div className='cartContainer'>   
             {
-                productAdd.map(item => <CartItem key={item.id} data={item} filter={filtrados} />)
+                productAdd.map(item => <CartItem 
+                                            key={item.id} 
+                                            data={item} 
+                                            filter={filtrados} 
+                                        />)
             }
         </div>
     )

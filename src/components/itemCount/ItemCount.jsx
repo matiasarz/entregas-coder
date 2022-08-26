@@ -32,13 +32,12 @@ const ItemCount = ({ data, toggle, onAdd, styleContainer, buttonStyle, statePass
                 </button>
             </div>
             {
-                statePass  ? <button 
+                statePass  && <button 
                                 className='addCart' 
                                 onClick={() => onAdd(count,data)}
                             >
                                 Agregar a carrito
                             </button> 
-                        : null
             }
         </div>
     )

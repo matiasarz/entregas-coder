@@ -1,8 +1,16 @@
 import { AiOutlinePlus } from 'react-icons/ai';
 import { AiOutlineMinus } from 'react-icons/ai';
+import { useContext, useEffect } from 'react';
+import { cartContextProvider } from '../../context/CartContextProvider';
 import './cartCount.css';
 
-const CartCount = ({ count, setCounter, initial, stock }) => {
+const CartCount = ({ count, setCounter, initial, stock, id }) => {
+
+    const { updateCart } = useContext(cartContextProvider);
+
+    useEffect(() => {
+        updateCart(count,id)
+    }, [count])
 
     const increase = () => {
         if (count < stock) {

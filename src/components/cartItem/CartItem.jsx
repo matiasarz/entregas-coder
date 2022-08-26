@@ -19,6 +19,7 @@ const CartItem = ({ data, filter }) => {
                     stock={stock} 
                     initial={1} 
                     price={price}
+                    id={id}
                 />
                 <button className='buttonDelete' onClick={() => filter(id)}>
                     Eliminar

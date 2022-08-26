@@ -6,14 +6,50 @@ const CartContextProvider = ({ children }) => {
 
     const [ productAdd, setProductAdd ] = useState([]);
 
+    const updateCart = (count,id) => {
+        let updateProductCount = productAdd.find(item => item.id === id)
+        let updateProductAdd = productAdd.map(item => {
+            if (item.id === updateProductCount.id) {
+                return {
+                    ...item,
+                    count: count
+                }
+            }
+            return { ...item }
+        })
+        setProductAdd(updateProductAdd)
+    }
+
     const duplicados = (product,id,count) => {
         if (productAdd.some(item => item.id === id)) {
-            let objectSelected = productAdd.find(item => item.id === id)
-            objectSelected.count += count;
-            setProductAdd([...productAdd])
+            const obj = productAdd.find(item => item.id === id);
+            const countUpdate = productAdd.map(item => {
+                if(item.id === obj.id) {
+                    return {
+                        ...item,
+                        count: item.count + count
+                    }
+                }
+                return { ...item }
+            })
+            setProductAdd([...countUpdate])
         } else {
             setProductAdd([...productAdd,{...product, count: count }])
         }
+
+        // let updateProductCount = productAdd.find(item => item.id === id);
+        // let updateProductAdd = productAdd.map(item => {
+        //     if(item.id === updateProductCount.id) {
+        //         return { ...item, count: count}
+        //     }
+        //     return { ...item }
+        // })
+
+        // if (productAdd.some(item => item.id === id)) {
+        //     setProductAdd([...updateProductAdd]);
+        // } else {
+        //     setProductAdd([...productAdd,{...product, count: count}])
+        // }
     }
 
     const filtrados = (id) => {
@@ -21,7 +57,7 @@ const CartContextProvider = ({ children }) => {
     }
 
     return (
-        <cartContextProvider.Provider value={{ duplicados, productAdd, filtrados }}>
+        <cartContextProvider.Provider value={{ duplicados, productAdd, filtrados, updateCart }}>
             {children}
         </cartContextProvider.Provider>
     )
