@@ -36,20 +36,6 @@ const CartContextProvider = ({ children }) => {
         } else {
             setProductAdd([...productAdd,{...product, count: count }])
         }
-
-        // let updateProductCount = productAdd.find(item => item.id === id);
-        // let updateProductAdd = productAdd.map(item => {
-        //     if(item.id === updateProductCount.id) {
-        //         return { ...item, count: count}
-        //     }
-        //     return { ...item }
-        // })
-
-        // if (productAdd.some(item => item.id === id)) {
-        //     setProductAdd([...updateProductAdd]);
-        // } else {
-        //     setProductAdd([...productAdd,{...product, count: count}])
-        // }
     }
 
     const filtrados = (id) => {

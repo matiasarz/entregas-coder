@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useFetch } from '../../hooks/useFetch';
 import ItemDetail from '../itemDetail/ItemDetail';
-
+import firestoreDB, { GetDataFromFirestoreDB } from "../../services/firebase";
+import Loading from "../loading/Loading";
 
 const ItemDetailContainer = () => {
-
-    const { data, loading } = useFetch('http://localhost:3000/dat.json');
-
+    
+    const { data, loading } = GetDataFromFirestoreDB(firestoreDB);
+ 
     let { id } = useParams();
     
     let selected = data.find(item => item.id == id);
@@ -14,19 +14,12 @@ const ItemDetailContainer = () => {
     if (selected === undefined) {
       selected = {};
     }
-    
-    const loadingStyle = {
-      margin: '50px auto',
-      textAlign: 'center'
-    }
-
-    if (loading) {
-        return <h2 style={loadingStyle}>Loading...</h2>
-    }
 
     return (
         <>
-          <ItemDetail data={selected} to={`/${selected.category}`}/> 
+          {
+            loading ? <Loading /> : <ItemDetail data={selected} to={`/${selected.category}`}/>
+          }
         </>
     )
 }
