@@ -1,23 +1,30 @@
-import { useEffect } from "react";
-import Item from "../components/item/Item";
+import { useEffect } from 'react';
+import Item from '../components/item/Item';
 import '../css-routes/styles.css';
-import firestoreDB, { GetCategoryFromFirestoreDB } from "../services/firebase";
+import { useGetCategoryFromFirestoreDB } from '../services/firebase';
+import Loading from '../components/loading/Loading';
 
 const Electrodomesticos = ({ title, setCategory }) => {
+    const { category, loading } =
+        useGetCategoryFromFirestoreDB('electrodomesticos');
+    useEffect(() => setCategory('electrodomesticos'), []);
 
-    const { category } = GetCategoryFromFirestoreDB(firestoreDB, 'electrodomesticos');
-    useEffect(() => setCategory('electrodomesticos'), [])
+    if (loading) return <Loading />;
 
     return (
         <section className="sectionContainer">
             <h1 className="sectionTitle">{title}</h1>
             <div className="itemListContainer">
-                {
-                    category.map(item => <Item key={item.id} data={item} to={`/electrodomesticos/detalle/${item.id}`} />)
-                }
+                {category.map((item) => (
+                    <Item
+                        key={item.id}
+                        data={item}
+                        to={`/electrodomesticos/detalle/${item.id}`}
+                    />
+                ))}
             </div>
-        </section>        
-    )
-}
+        </section>
+    );
+};
 
-export default Electrodomesticos
+export default Electrodomesticos;

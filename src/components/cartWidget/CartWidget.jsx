@@ -3,29 +3,24 @@ import { useContext } from 'react';
 import { cartContextProvider } from '../../context/CartContextProvider';
 
 const CartWidget = () => {
-
     const { productAdd } = useContext(cartContextProvider);
-    
+
     const cartStyle = {
         fontSize: '22px',
         color: '#fff',
-        cursor: 'pointer'
-    }
+        cursor: 'pointer',
+    };
 
     return (
         <>
             <span>
-                {
-                    productAdd.map(item => item.count).reduce((item, acc) => {
-                        return item + acc
-                    }, null)
-                }
+                {productAdd.reduce((acc, val) => acc + val.count, null)}
             </span>
-            <FaShoppingCart style={cartStyle}/>
+            <FaShoppingCart style={cartStyle} />
         </>
-    )
-}
+    );
+};
 
 // FaShoppingCart
 
-export default CartWidget
+export default CartWidget;

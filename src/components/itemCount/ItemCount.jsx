@@ -1,28 +1,34 @@
 import { BsFillPlusCircleFill } from 'react-icons/bs';
 import { BsFillDashCircleFill } from 'react-icons/bs';
-import './itemCount.css'
+import './itemCount.css';
 import { useState } from 'react';
 
-const ItemCount = ({ data, toggle, onAdd, styleContainer, buttonStyle, statePass }) => {
-
+const ItemCount = ({
+    data,
+    toggle,
+    onAdd,
+    styleContainer,
+    buttonStyle,
+    statePass,
+}) => {
     const { initial, stock } = data;
 
     const [count, setCount] = useState(1);
-    
+
     const handleIncrease = () => {
         if (count < stock) {
             setCount(count + 1);
         }
-    }
+    };
     const handleDecrease = () => {
         if (count > initial) {
             setCount(count - 1);
         }
-    }
+    };
 
     return (
         <div className={styleContainer} style={toggle}>
-            <div className='counterContainer'>
+            <div className="counterContainer">
                 <button onClick={handleIncrease}>
                     <BsFillPlusCircleFill style={buttonStyle} />
                 </button>
@@ -31,16 +37,13 @@ const ItemCount = ({ data, toggle, onAdd, styleContainer, buttonStyle, statePass
                     <BsFillDashCircleFill style={buttonStyle} />
                 </button>
             </div>
-            {
-                statePass  && <button 
-                                className='addCart' 
-                                onClick={() => onAdd(count,data)}
-                            >
-                                Agregar a carrito
-                            </button> 
-            }
+            {statePass && (
+                <button className="addCart" onClick={() => onAdd(count, data)}>
+                    Agregar a carrito
+                </button>
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default ItemCount
+export default ItemCount;
