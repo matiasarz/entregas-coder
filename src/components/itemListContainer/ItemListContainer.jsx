@@ -2,6 +2,7 @@ import './ItemListContainer.css';
 import ItemList from '../itemList/ItemList';
 import { useGetDataFromFirestoreDB } from '../../services/firebase';
 import Loading from '../loading/Loading';
+import MenuAside from '../menuAside/MenuAside';
 
 const ItemListContainer = ({ text }) => {
     const { data, loading } = useGetDataFromFirestoreDB();
@@ -9,10 +10,13 @@ const ItemListContainer = ({ text }) => {
     if (loading) return <Loading />;
 
     return (
-        <>
-            <h1 className="sectionTitle">{text}</h1>
-            <ItemList data={data} />
-        </>
+        <div className="dFlex">
+            <MenuAside />
+            <div className="catalogoContainer">
+                <h1 className="sectionTitle">{text}</h1>
+                <ItemList data={data} />
+            </div>
+        </div>
     );
 };
 

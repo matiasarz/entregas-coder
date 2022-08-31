@@ -4,7 +4,7 @@ import './Loading.css';
 const Loading = () => {
     return (
         <div className="loadingContainer">
-            <DotSpinner size={100} speed={0.9} color="black" />
+            <DotSpinner size={100} speed={0.9} color="#38f" />
         </div>
     );
 };

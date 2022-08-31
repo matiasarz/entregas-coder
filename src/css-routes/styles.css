@@ -5,3 +5,11 @@
     font-weight: 1000;
     font-size: 1.7em;
 }
+.dFlex {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+.dFlex .catalogoContainer {
+    flex-grow: 1;
+}

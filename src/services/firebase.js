@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getFirestore, getDocs, collection } from 'firebase/firestore';
+import { getFirestore, getDocs, collection, addDoc } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
+import { data } from '../data/data';
 
 const firebaseConfig = {
     apiKey: 'AIzaSyAx7_6pKlq5CX_hOInpw_EwLr8PfvZKFGI',
@@ -60,5 +61,14 @@ export const useGetCategoryFromFirestoreDB = (filter) => {
 
     return { category, loading };
 };
+
+// const saveProductToFirebase = async () => {
+//     const productCollection = collection(firestoreDB, 'product');
+
+//     for (let item of data) {
+//         const docRef = await addDoc(productCollection, item);
+//         console.log(docRef.id);
+//     }
+// };
 
 export default firestoreDB;

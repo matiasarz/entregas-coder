@@ -36,10 +36,12 @@ const Item = ({ data, to }) => {
                         <button>Ver detalle</button>
                     </Link>
                 </div>
-                <div className="cardInfo">
-                    <h2>${price}</h2>
+                <div className="cardInfoContainer">
+                    <div className="cardInfo">
+                        <h2>${price}</h2>
+                    </div>
+                    <Title data={data} toggle={pass ? toggleOn : toggleOff} />
                 </div>
-                <Title data={data} toggle={pass ? toggleOn : toggleOff} />
             </div>
         </>
     );
