@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
 import { getFirestore, getDocs, collection } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 
@@ -16,7 +15,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const firestoreDB = getFirestore(app);
-const analytics = getAnalytics(app);
+// import { getAnalytics } from 'firebase/analytics';
+// const analytics = getAnalytics(app);
 
 export const useGetDataFromFirestoreDB = () => {
     const [data, setData] = useState([]);
@@ -34,7 +34,7 @@ export const useGetDataFromFirestoreDB = () => {
                 }));
                 setData(docsData);
             })
-            .finally(setLoading(false));
+            .finally(() => setLoading(false));
     }, []);
 
     return { data, loading };
@@ -55,8 +55,8 @@ export const useGetCategoryFromFirestoreDB = (filter) => {
                     .filter((item) => item.category === filter);
                 setCategory(docsData);
             })
-            .finally(setLoading(false));
-    }, []);
+            .finally(() => setLoading(false));
+    }, [filter]);
 
     return { category, loading };
 };

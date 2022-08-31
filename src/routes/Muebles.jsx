@@ -6,7 +6,7 @@ import Loading from '../components/loading/Loading';
 
 const Muebles = ({ title, setCategory }) => {
     const { category, loading } = useGetCategoryFromFirestoreDB('muebles');
-    useEffect(() => setCategory('muebles'), []);
+    useEffect(() => setCategory('muebles'));
 
     if (loading) return <Loading />;
 

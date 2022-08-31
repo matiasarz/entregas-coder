@@ -7,7 +7,7 @@ import Loading from '../components/loading/Loading';
 const Electrodomesticos = ({ title, setCategory }) => {
     const { category, loading } =
         useGetCategoryFromFirestoreDB('electrodomesticos');
-    useEffect(() => setCategory('electrodomesticos'), []);
+    useEffect(() => setCategory('electrodomesticos'));
 
     if (loading) return <Loading />;
 

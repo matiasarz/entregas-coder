@@ -9,7 +9,7 @@ const Cart = () => {
 
     const titleStyle = {
         marginTop: '20px',
-        marginBottom: '293px',
+        marginBottom: '292px',
     };
 
     return (

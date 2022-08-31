@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Item from '../components/item/Item';
 import { useGetCategoryFromFirestoreDB } from '../services/firebase';
 import '../css-routes/styles.css';
@@ -6,15 +6,12 @@ import Loading from '../components/loading/Loading';
 
 const Tecnologia = ({ title, setCategory }) => {
     const { category, loading } = useGetCategoryFromFirestoreDB('tecnologia');
-    useEffect(() => setCategory('tecnologia'), []);
-
-    const [asd, setasd] = useState(1);
+    useEffect(() => setCategory('tecnologia'));
 
     if (loading) return <Loading />;
 
     return (
         <section className="sectionContainer">
-            <button onClick={() => setasd(asd + 1)}>asd</button>
             <h1 className="sectionTitle">{title}</h1>
             <div className="itemListContainer">
                 {category.map((item) => (

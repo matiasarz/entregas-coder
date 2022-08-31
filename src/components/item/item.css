@@ -1,6 +1,6 @@
 .card {
     width: 224px;
-    height: 360px;
+    height: 300px;
     border-radius: 4px;
     transition: transform .3s;
     margin: 50px 3px;
@@ -59,10 +59,13 @@
 .title {
     width: inherit;
     position: absolute;
+    display: flex;
+    align-items: center;
 }
 .title h5 {
+    flex-grow: 1;
     padding: 0 15px;
-    margin-top: 20px;
+    margin: 10px auto;
     font-size: .9em;
     text-align: center;
     font-family: 'Lato', sans-serif;

@@ -2,12 +2,21 @@
     background-color: #38f;
     color: #fff;
     height: 150px;
-    display: flex;
     padding: 10px 30px;
-    justify-content: space-between;
-    align-items: flex-end;
+    text-align: center;
 }
-.footerContainer p:hover {
+.socialMediaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 90%;
+}
+.socialMediaContainer .icon {
+    font-size: 30px;
+    color: #fff;
+}
+.socialMediaContainer .icon:hover {
     color: #000;
-    cursor: pointer;
+    transition: color .6s;
 }

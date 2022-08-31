@@ -1,5 +1,4 @@
-import { BsFillPlusCircleFill } from 'react-icons/bs';
-import { BsFillDashCircleFill } from 'react-icons/bs';
+import { BsFillPlusCircleFill, BsFillDashCircleFill } from 'react-icons/bs';
 import './itemCount.css';
 import { useState } from 'react';
 

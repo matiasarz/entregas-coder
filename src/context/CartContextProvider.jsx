@@ -6,7 +6,6 @@ const CartContextProvider = ({ children }) => {
     const [productAdd, setProductAdd] = useState([]);
 
     const updateCart = (count, id) => {
-        //let updateProductCount = productAdd.find(item => item.id === id)
         let updateProductAdd = productAdd.map((item) => {
             if (item.id === id) {
                 return {
@@ -20,24 +19,9 @@ const CartContextProvider = ({ children }) => {
     };
 
     const duplicados = (product, id, count) => {
-        // if (productAdd.some(item => item.id === id)) {
-
         const item = productAdd.find((item) => item.id === id);
         if (item !== undefined) updateCart(item.count + count, id);
         else setProductAdd([...productAdd, { ...product, count }]);
-        // const countUpdate = productAdd.map(item => {
-        //     if(item.id === id) {
-        //         return {
-        //             ...item,
-        //             count: item.count + count
-        //         }
-        //     }
-        //     return { ...item }
-        // })
-        // setProductAdd(countUpdate)
-        // } else {
-        //     setProductAdd([...productAdd,{...product, count }])
-        // }
     };
 
     const filtrados = (id) => {

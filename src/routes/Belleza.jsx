@@ -6,7 +6,7 @@ import Loading from '../components/loading/Loading';
 
 const Belleza = ({ title, setCategory }) => {
     const { category, loading } = useGetCategoryFromFirestoreDB('belleza');
-    useEffect(() => setCategory('belleza'), []);
+    useEffect(() => setCategory('belleza'));
 
     if (loading) return <Loading />;
 
