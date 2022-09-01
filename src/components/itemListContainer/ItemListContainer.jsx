@@ -11,7 +11,7 @@ const ItemListContainer = ({ text }) => {
 
     return (
         <div className="dFlex">
-            <MenuAside />
+            <MenuAside data={data} />
             <div className="catalogoContainer">
                 <h1 className="sectionTitle">{text}</h1>
                 <ItemList data={data} />

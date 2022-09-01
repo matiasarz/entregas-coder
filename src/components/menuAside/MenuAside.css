@@ -13,4 +13,24 @@
         margin-top: 83px;
         max-width: 200px;
     }
+    .menuAsideContainer h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+    }
+    .linkContainer {
+        padding: 7px 0;
+        margin: 10px auto;
+        border-bottom: 1px solid #999;
+    }
+    .linkContainer:hover {
+        box-shadow: 0 8px 2px -2px #999;
+        transition: box-shadow .5s;
+    }
+    .linkContainer .link:hover {
+        color: #38f;
+    }
+    .linkContainer .link {
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+    }
 }
