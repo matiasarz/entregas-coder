@@ -10,10 +10,10 @@ const Electrodomesticos = ({ title, setCategory }) => {
         useGetCategoryFromFirestoreDB('electrodomesticos');
 
     const [itemCategory, setItemCategory] = useState([]);
-    useEffect(() => {
-        setCategory('tecnologia');
-        setItemCategory(categoryDB);
-    }, [categoryDB]);
+
+    useEffect(() => setCategory('electrodomesticos'));
+
+    useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 
     if (loading) return <Loading />;
 

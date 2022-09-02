@@ -8,11 +8,12 @@ import MenuAside from '../components/menuAside/MenuAside';
 const Indumentaria = ({ title, setCategory }) => {
     const { categoryDB, loading } =
         useGetCategoryFromFirestoreDB('indumentaria');
+
     const [itemCategory, setItemCategory] = useState([]);
-    useEffect(() => {
-        setCategory('tecnologia');
-        setItemCategory(categoryDB);
-    }, [categoryDB]);
+
+    useEffect(() => setCategory('indumentaria'));
+
+    useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 
     if (loading) return <Loading />;
 

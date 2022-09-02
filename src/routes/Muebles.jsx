@@ -10,10 +10,9 @@ const Muebles = ({ title, setCategory }) => {
 
     const [itemCategory, setItemCategory] = useState([]);
 
-    useEffect(() => {
-        setCategory('tecnologia');
-        setItemCategory(categoryDB);
-    }, [categoryDB]);
+    useEffect(() => setCategory('muebles'));
+
+    useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 
     if (loading) return <Loading />;
 

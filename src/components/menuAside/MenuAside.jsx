@@ -6,11 +6,9 @@ import './MenuAside.css';
 const MenuAside = ({ categoryDB, setItemCategory }) => {
     const { data } = useGetDataFromFirestoreDB();
 
-    let filtros = [20000, 40000, 60000, 80000, 100000];
-    const filtrar = (filtro) => {
-        console.log(categoryDB);
+    let filtros = [2000, 5000, 30000, 60000, 80000, 100000];
+    const filtrar = (filtro) =>
         setItemCategory(categoryDB.filter((item) => item.price < filtro));
-    };
 
     return (
         <article className="menuAsideContainer">
