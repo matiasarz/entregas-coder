@@ -14,7 +14,7 @@ const Cart = () => {
 
     return (
         <section
-            className="sectionContainer"
+            className=".sectionContainerCart"
             style={productAdd.length === 1 ? { marginBottom: '150.5px' } : null}
         >
             {productAdd.length ? null : (

@@ -42,7 +42,7 @@ export const useGetDataFromFirestoreDB = () => {
 };
 
 export const useGetCategoryFromFirestoreDB = (filter) => {
-    const [category, setCategory] = useState([]);
+    const [categoryDB, setCategoryDB] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -54,12 +54,12 @@ export const useGetCategoryFromFirestoreDB = (filter) => {
                 const docsData = response.docs
                     .map((item) => ({ ...item.data(), id: item.id }))
                     .filter((item) => item.category === filter);
-                setCategory(docsData);
+                setCategoryDB(docsData);
             })
             .finally(() => setLoading(false));
     }, [filter]);
 
-    return { category, loading };
+    return { categoryDB, loading, setCategoryDB };
 };
 
 // const saveProductToFirebase = async () => {
@@ -70,5 +70,6 @@ export const useGetCategoryFromFirestoreDB = (filter) => {
 //         console.log(docRef.id);
 //     }
 // };
+// saveProductToFirebase();
 
 export default firestoreDB;

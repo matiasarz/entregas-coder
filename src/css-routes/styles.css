@@ -1,15 +1,22 @@
 /* Section Electrodomesticos */
 
+.sectionContainerCart .sectionTitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 1000;
+    font-size: 1.7em;
+}
 .sectionContainer .sectionTitle {
     font-family: 'Lato', sans-serif;
     font-weight: 1000;
     font-size: 1.7em;
 }
-.dFlex {
+.sectionContainer {
     display: flex;
     justify-content: space-around;
     gap: 30px;
 }
-.dFlex .catalogoContainer {
+.sectionContainer .categoryContainer {
     flex-grow: 1;
+    width: 700px;
 }
+

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from '../itemDetail/ItemDetail';
 import { useGetDataFromFirestoreDB } from '../../services/firebase';
 import Loading from '../loading/Loading';
+import MenuAside from '../menuAside/MenuAside';
 
 const ItemDetailContainer = () => {
     const { data } = useGetDataFromFirestoreDB();
