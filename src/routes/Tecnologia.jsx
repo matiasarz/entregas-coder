@@ -5,12 +5,10 @@ import '../css-routes/styles.css';
 import Loading from '../components/loading/Loading';
 import MenuAside from '../components/menuAside/MenuAside';
 
-const Tecnologia = ({ title, setCategory }) => {
+const Tecnologia = ({ title }) => {
     const { categoryDB, loading } = useGetCategoryFromFirestoreDB('tecnologia');
 
     const [itemCategory, setItemCategory] = useState([]);
-
-    useEffect(() => setCategory('tecnologia'));
 
     useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 

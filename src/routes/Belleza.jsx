@@ -5,12 +5,10 @@ import { useGetCategoryFromFirestoreDB } from '../services/firebase';
 import Loading from '../components/loading/Loading';
 import MenuAside from '../components/menuAside/MenuAside';
 
-const Belleza = ({ title, setCategory }) => {
+const Belleza = ({ title }) => {
     const { categoryDB, loading } = useGetCategoryFromFirestoreDB('belleza');
 
     const [itemCategory, setItemCategory] = useState([]);
-
-    useEffect(() => setCategory('belleza'));
 
     useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 

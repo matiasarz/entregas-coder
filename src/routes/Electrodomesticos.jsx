@@ -5,13 +5,11 @@ import { useGetCategoryFromFirestoreDB } from '../services/firebase';
 import Loading from '../components/loading/Loading';
 import MenuAside from '../components/menuAside/MenuAside';
 
-const Electrodomesticos = ({ title, setCategory }) => {
+const Electrodomesticos = ({ title }) => {
     const { categoryDB, loading } =
         useGetCategoryFromFirestoreDB('electrodomesticos');
 
     const [itemCategory, setItemCategory] = useState([]);
-
-    useEffect(() => setCategory('electrodomesticos'));
 
     useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 

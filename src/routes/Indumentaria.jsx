@@ -5,13 +5,11 @@ import '../css-routes/styles.css';
 import Loading from '../components/loading/Loading';
 import MenuAside from '../components/menuAside/MenuAside';
 
-const Indumentaria = ({ title, setCategory }) => {
+const Indumentaria = ({ title }) => {
     const { categoryDB, loading } =
         useGetCategoryFromFirestoreDB('indumentaria');
 
     const [itemCategory, setItemCategory] = useState([]);
-
-    useEffect(() => setCategory('indumentaria'));
 
     useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 

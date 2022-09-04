@@ -5,12 +5,10 @@ import '../css-routes/styles.css';
 import Loading from '../components/loading/Loading';
 import MenuAside from '../components/menuAside/MenuAside';
 
-const Muebles = ({ title, setCategory }) => {
+const Muebles = ({ title }) => {
     const { categoryDB, loading } = useGetCategoryFromFirestoreDB('muebles');
 
     const [itemCategory, setItemCategory] = useState([]);
-
-    useEffect(() => setCategory('muebles'));
 
     useEffect(() => setItemCategory(categoryDB), [categoryDB]);
 

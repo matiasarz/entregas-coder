@@ -15,8 +15,6 @@ import CartContextProvider from './context/CartContextProvider';
 import Footer from './components/footer/Footer';
 
 function App() {
-    const [category, setCategory] = useState('');
-
     return (
         <>
             <CartContextProvider>
@@ -27,53 +25,30 @@ function App() {
                             <Route path={`/`} element={<Inicio />} />
                             <Route path={`/detalle/:id`} element={<Detail />} />
                             <Route
-                                path={`/${category}/detalle/:id`}
+                                path={`/:category/detalle/:id`}
                                 element={<Detail />}
                             />
                             <Route
                                 path="/belleza"
-                                element={
-                                    <Belleza
-                                        title="Belleza"
-                                        setCategory={setCategory}
-                                    />
-                                }
+                                element={<Belleza title="Belleza" />}
                             />
                             <Route
                                 path="/electrodomesticos"
                                 element={
-                                    <Electrodomesticos
-                                        title="Electrodomésticos"
-                                        setCategory={setCategory}
-                                    />
+                                    <Electrodomesticos title="Electrodomésticos" />
                                 }
                             />
                             <Route
                                 path="/indumentaria"
-                                element={
-                                    <Indumentaria
-                                        title="Indumentaria"
-                                        setCategory={setCategory}
-                                    />
-                                }
+                                element={<Indumentaria title="Indumentaria" />}
                             />
                             <Route
                                 path="/muebles"
-                                element={
-                                    <Muebles
-                                        title="Muebles"
-                                        setCategory={setCategory}
-                                    />
-                                }
+                                element={<Muebles title="Muebles" />}
                             />
                             <Route
                                 path="/tecnologia"
-                                element={
-                                    <Tecnologia
-                                        title="Tecnología"
-                                        setCategory={setCategory}
-                                    />
-                                }
+                                element={<Tecnologia title="Tecnología" />}
                             />
                             <Route path="/cart" element={<Cart />} />
                         </Routes>
