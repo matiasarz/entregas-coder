@@ -75,7 +75,7 @@
 
 @media only screen and (min-width: 1050px) {
     .itemDetail .itemDetailImg .imgDetail {
-        width: 660px;
+        width: 570px;
         height: 470px;
         object-fit: contain;
     }

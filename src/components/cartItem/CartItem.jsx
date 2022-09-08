@@ -24,7 +24,7 @@ const CartItem = ({ data, filter }) => {
                     Eliminar
                 </button>
             </div>
-            <p>Total: ${counter * price}</p>
+            <p>Total: ${(counter * price).toLocaleString('es')}</p>
         </div>
     );
 };
