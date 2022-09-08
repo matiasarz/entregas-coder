@@ -3,8 +3,6 @@ import './Dashboard.css';
 const ItemRequested = ({ ItemRequested }) => {
     const { imgUrl, name, count, price } = ItemRequested;
 
-    console.log(ItemRequested);
-
     return (
         <div className="itemRequested">
             <img src={imgUrl} alt={name} className="ItemRequestedImg" />
