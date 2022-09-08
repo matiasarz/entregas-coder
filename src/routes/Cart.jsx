@@ -9,12 +9,12 @@ const Cart = () => {
 
     const titleStyle = {
         marginTop: '20px',
-        marginBottom: '292px',
+        marginBottom: '287px',
     };
 
     return (
         <section
-            className=".sectionContainerCart"
+            className="sectionCartContainer"
             style={productAdd.length === 1 ? { marginBottom: '150.5px' } : null}
         >
             {productAdd.length ? null : (
@@ -23,7 +23,7 @@ const Cart = () => {
                 </Link>
             )}
             <h1
-                className="titleSection"
+                className="sectionTitle"
                 style={productAdd.length === 0 ? titleStyle : null}
             >
                 {productAdd.length === 0

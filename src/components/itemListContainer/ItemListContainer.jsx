@@ -4,7 +4,7 @@ import { useGetDataFromFirestoreDB } from '../../services/firebase';
 import Loading from '../loading/Loading';
 
 const ItemListContainer = ({ text }) => {
-    const { data, loading } = useGetDataFromFirestoreDB();
+    const { data, loading } = useGetDataFromFirestoreDB('product');
 
     if (loading) return <Loading />;
 

@@ -42,9 +42,8 @@
     align-self: center;
 }
 .buttonBack {
-    background-color: #fff;
-    border: 2px solid #38f;
     background-color: #38f;
+    border: 2px solid #38f;
     border-radius: 5px;
     display: block;
     padding: 8px;

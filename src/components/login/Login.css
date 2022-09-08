@@ -1,0 +1,14 @@
+.sectionContainerLogin {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.sectionContainerLogin h1 {
+    color: #38f;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}

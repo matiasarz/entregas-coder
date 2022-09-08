@@ -1,0 +1,70 @@
+.sectionDashboardContainer h1,h2,h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.sectionDashboardContainer li {
+    margin: 10px auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+.logout {
+    background-color: #38f;
+    border: 2px solid #38f;
+    border-radius: 5px;
+    display: block;
+    padding: 8px;
+    font-weight: 600;
+    text-align: right;
+    color: #fff;
+    cursor: pointer;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.orderhistory {
+    margin-top: 30px;
+}
+.requestOrder {
+    margin-top: 20px;
+}
+.requestOrder form input {
+    padding: 5px;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+.requestOrder .searchBar {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.requestOrder .searchBar button {
+    border: none;
+}
+.showRequestedOrder {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.itemRequested {
+    display: grid;
+    grid-template-rows: 120px;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    background-color: #fff;
+}
+.itemRequested p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: center;
+}
+.itemRequested .ItemRequestedImg {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+} 

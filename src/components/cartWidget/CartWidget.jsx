@@ -7,7 +7,6 @@ const CartWidget = () => {
 
     const cartStyle = {
         fontSize: '22px',
-        color: '#fff',
         cursor: 'pointer',
     };
 

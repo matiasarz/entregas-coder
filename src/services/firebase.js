@@ -2,7 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, collection, addDoc } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import { data } from '../data/data';
+// import { data } from '../data/data';
 
 const firebaseConfig = {
     apiKey: 'AIzaSyAx7_6pKlq5CX_hOInpw_EwLr8PfvZKFGI',
@@ -19,12 +19,12 @@ const firestoreDB = getFirestore(app);
 // import { getAnalytics } from 'firebase/analytics';
 // const analytics = getAnalytics(app);
 
-export const useGetDataFromFirestoreDB = () => {
+export const useGetDataFromFirestoreDB = (nameCollection) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        const productCollection = collection(firestoreDB, 'product');
+        const productCollection = collection(firestoreDB, nameCollection);
         const docsSnapshot = getDocs(productCollection);
         setLoading(true);
         docsSnapshot
@@ -36,7 +36,7 @@ export const useGetDataFromFirestoreDB = () => {
                 setData(docsData);
             })
             .finally(() => setLoading(false));
-    }, []);
+    }, [nameCollection]);
 
     return { data, loading };
 };
@@ -60,6 +60,13 @@ export const useGetCategoryFromFirestoreDB = (filter) => {
     }, [filter]);
 
     return { categoryDB, loading, setCategoryDB };
+};
+
+export const uploadOrderToFirestoreDB = async (order) => {
+    const collectionRef = collection(firestoreDB, 'orders');
+    const docRef = await addDoc(collectionRef, order);
+
+    return docRef;
 };
 
 // const saveProductToFirebase = async () => {

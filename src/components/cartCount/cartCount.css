@@ -5,6 +5,9 @@
     border: 1px solid #999;
     padding: 5px 10px;
 }
+.cartCountContainer .number {
+    margin: 0;
+}
 .cartCountContainer button {
     border: none;
     background-color: #fff;

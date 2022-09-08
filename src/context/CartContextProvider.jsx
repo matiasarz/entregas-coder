@@ -5,15 +5,15 @@ export const cartContextProvider = createContext();
 const CartContextProvider = ({ children }) => {
     const [productAdd, setProductAdd] = useState([]);
     const [total, setTotal] = useState(0);
+    const [dataForm, setDataForm] = useState([]);
+    const [navigateTo, setNavigateTo] = useState(false);
 
     useEffect(
         () =>
             setTotal(
-                productAdd
-                    .reduce((acc, item) => {
-                        return acc + item.price * item.count;
-                    }, 0)
-                    .toLocaleString('es')
+                productAdd.reduce((acc, item) => {
+                    return acc + item.price * item.count;
+                }, null)
             ),
         [productAdd]
     );
@@ -43,7 +43,18 @@ const CartContextProvider = ({ children }) => {
 
     return (
         <cartContextProvider.Provider
-            value={{ duplicados, productAdd, filtrados, updateCart, total }}
+            value={{
+                duplicados,
+                productAdd,
+                filtrados,
+                updateCart,
+                total,
+                navigateTo,
+                setNavigateTo,
+                setDataForm,
+                dataForm,
+                setProductAdd,
+            }}
         >
             {children}
         </cartContextProvider.Provider>

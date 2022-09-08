@@ -1,0 +1,27 @@
+.formContainer div {
+    width: 100%;
+    padding: 10px;
+}
+.formContainer div input {
+    outline: none;
+    width: inherit;
+    padding: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    color: #38f;
+}
+.formContainer div input::placeholder {
+    color: #38f;
+}
+.formContainer button {
+    background-color: #38f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 18px;
+    margin-top: 18px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+}

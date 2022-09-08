@@ -12,6 +12,8 @@ import Tecnologia from './routes/Tecnologia';
 import Cart from './routes/Cart';
 import CartContextProvider from './context/CartContextProvider';
 import Footer from './components/footer/Footer';
+import Login from './components/login/Login';
+import Dashboard from './components/dashboard/Dashboard';
 
 function App() {
     return (
@@ -50,6 +52,8 @@ function App() {
                                 element={<Tecnologia title="Tecnología" />}
                             />
                             <Route path="/cart" element={<Cart />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/dashboard" element={<Dashboard />} />
                         </Routes>
                     </main>
                     <Footer />

@@ -4,7 +4,7 @@ import LinkAside from './LinkAside';
 import './MenuAside.css';
 
 const MenuAside = ({ categoryDB, setItemCategory }) => {
-    const { data } = useGetDataFromFirestoreDB();
+    const { data } = useGetDataFromFirestoreDB('product');
 
     let filtros = [2000, 5000, 30000, 60000, 80000, 100000];
     const filtrar = (filtro) =>

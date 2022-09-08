@@ -8,11 +8,12 @@
 .nav div {
     flex-grow: .5;
     text-align: center;
-    height: 46.66px;
 }
 .nav div img {
+    border-radius: 50%;
     width: 60px;
     height: inherit;
+    object-fit: contain;
 }
 .navBar {
     flex-grow: 3;
@@ -20,11 +21,24 @@
     justify-content: space-evenly;
     align-items: flex-end;
 }
-.navBar .link {
+.navBarIcons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navBar .link, .navBarIcons .link {
     text-align: center;
     font-size: .9em;
     color: #fff;
     transition: color .5s;
+}
+.navBarIcons {
+    margin-right: 5%;
+}
+.navBarIcons span {
+    margin-left: 7px;
+    font-size: .9em;
 }
 .navBar .link:hover {
     color: #000;

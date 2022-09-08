@@ -31,7 +31,7 @@ const CartCount = ({ count, setCounter, initial, stock, id }) => {
             <button onClick={decrease}>
                 <AiOutlineMinus style={buttonStyle} />
             </button>
-            <h3>{count}</h3>
+            <h3 className="number">{count}</h3>
             <button onClick={increase}>
                 <AiOutlinePlus style={buttonStyle} />
             </button>
