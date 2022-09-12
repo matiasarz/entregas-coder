@@ -51,7 +51,7 @@
     .nav {
         position: relative;
         z-index: 500;
-        padding: 0 10px;
+        padding: 5px 10px;
         display: grid;
         grid-template-rows: 47px;
         grid-template-columns: 100px 1fr 150px;
@@ -125,7 +125,7 @@
             margin-top: 224px;
         }
         100% {
-            margin-top: 310px;
+            margin-top: 318px;
         }
     }
     @keyframes hide {
@@ -142,7 +142,7 @@
             margin-top: -224px;
         }
         100% {
-            margin-top: -310px;
+            margin-top: -318px;
         }
     }
 }

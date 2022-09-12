@@ -35,7 +35,7 @@ const DashBord = () => {
     return (
         <section className="sectionDashboardContainer">
             <button className="logout" onClick={() => setNavigateTo(false)}>
-                Cerrar sesión
+                Log out
             </button>
             <h1>!Hola {dataForm.name.toUpperCase()}¡</h1>
             <article className="orderhistory">

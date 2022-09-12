@@ -126,7 +126,7 @@ const NavBar = () => {
                             >
                                 <div>
                                     <AiOutlineLogin style={style} />
-                                    <span>Iniciar sesión</span>
+                                    <span>Log in</span>
                                 </div>
                             </NavLink>
                         </li>
