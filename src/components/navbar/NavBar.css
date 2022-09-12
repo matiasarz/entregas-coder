@@ -1,9 +1,9 @@
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    background: #38f;
+    background-color: #38f;
 }
 .nav div {
     flex-grow: .5;
@@ -43,4 +43,106 @@
 .navBar .link:hover {
     color: #000;
     transition: color .5s;
+}
+.barsContainer {
+    display: none;
+}
+@media only screen and (max-width: 990px) {
+    .nav {
+        position: relative;
+        z-index: 500;
+        padding: 0 10px;
+        display: grid;
+        grid-template-rows: 47px;
+        grid-template-columns: 100px 1fr 150px;
+    }
+    .nav div {
+        flex-grow: 0;
+        text-align: center;
+    }
+    .navBar {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        padding: 15px;
+        font-size: 1.1em;
+        background-color: #fff;
+        width: 100%;
+    }
+    .navBar li {
+        margin: 14px auto;
+        border-bottom: 1px solid #999;
+    }
+    .navBar .link, .navBarIcons .link {
+        color: #000;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+    }
+    .navBarIcons {
+        margin: 0;
+        flex-grow: 0;
+    }
+
+    .nav .barsContainer {
+        display: block;
+        justify-content: flex-end;
+        text-align: right;
+    }
+    .barsContainer button {
+        border: none;
+        background-color: #38f;
+    }
+
+    .nav .showMenu {
+        animation-name: show;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+        transition: animation 1s;
+    }
+    .nav .hideMenu {
+        animation-name: hide;
+        animation-duration: .3s;
+        animation-fill-mode: forwards;
+        transition: animation 1s;
+
+    }
+
+
+
+
+
+    @keyframes show {
+        0% {
+            margin-top: 56px;
+        }
+        25% {
+            margin-top: 112px;
+        }
+        50% {
+            margin-top: 168px;
+        }
+        75% {
+            margin-top: 224px;
+        }
+        100% {
+            margin-top: 310px;
+        }
+    }
+    @keyframes hide {
+        0% {
+            margin-top: -56px;
+        }
+        25% {
+            margin-top: -112px;
+        }
+        50% {
+            margin-top: -168px;
+        }
+        75% {
+            margin-top: -224px;
+        }
+        100% {
+            margin-top: -310px;
+        }
+    }
 }
