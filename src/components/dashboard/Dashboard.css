@@ -28,6 +28,10 @@
 }
 .requestOrder {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .requestOrder form input {
     padding: 5px;
@@ -36,7 +40,8 @@
     font-weight: 600;
 }
 .requestOrder .searchBar {
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -49,6 +54,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.showRequestedOrder h4 {
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 .itemRequested {
     display: grid;

@@ -9,16 +9,16 @@ import ItemRequested from './ItemRequested';
 const DashBord = () => {
     const { dataForm, setNavigateTo, navigateTo } =
         useContext(cartContextProvider);
+
     const { data } = useGetDataFromFirestoreDB('orders');
 
     const [inputSearch, setInputSearch] = useState({
         id: '',
     });
-    const [searchOrder, setSearchOrder] = useState([]);
 
-    const { name } = dataForm;
+    const [searchOrder, setSearchOrder] = useState({});
 
-    let newArr = data.filter((item) => item.buyer.name === name);
+    let idBuyer = data.filter((item) => item.buyer.email === dataForm.email);
 
     if (!navigateTo) return <Navigate to="/login" replace={true} />;
 
@@ -32,21 +32,19 @@ const DashBord = () => {
         setSearchOrder(data.find((item) => item.id === inputSearch));
     };
 
-    const { items } = searchOrder;
-
     return (
         <section className="sectionDashboardContainer">
             <button className="logout" onClick={() => setNavigateTo(false)}>
                 Cerrar sesión
             </button>
-            <h1>!Hola {name}¡</h1>
+            <h1>!Hola {dataForm.name.toUpperCase()}¡</h1>
             <article className="orderhistory">
                 <h2>Historial de Compras</h2>
-                {newArr.length === 0 ? (
+                {idBuyer.length === 0 ? (
                     <h3>El historial de compras esta vacío</h3>
                 ) : (
                     <ul>
-                        {newArr.map((item) => (
+                        {idBuyer.map((item) => (
                             <li key={item.id}> Código de compra - {item.id}</li>
                         ))}
                     </ul>
@@ -67,11 +65,15 @@ const DashBord = () => {
                 </form>
             </article>
             <article className="showRequestedOrder">
-                {items
-                    ? items.map((item) => (
-                          <ItemRequested key={item.id} ItemRequested={item} />
-                      ))
-                    : 'Campo vacío'}
+                {searchOrder === undefined ? (
+                    <h4>Ingresé un código válido</h4>
+                ) : !Object.entries(searchOrder).length ? (
+                    <h4>Consulte su compra</h4>
+                ) : (
+                    searchOrder.items.map((item) => (
+                        <ItemRequested key={item.id} ItemRequested={item} />
+                    ))
+                )}
             </article>
         </section>
     );
