@@ -91,3 +91,19 @@
     background-color: #fff;
     color: #38f;
 }
+
+
+
+@media only screen and (max-width: 990px) {
+    .itemListContainer .card {
+        flex-grow: 1;
+        justify-self: center;
+        margin: 10px 5px;
+    }
+    .itemListContainer .card .cardImg {
+        width: 100%;
+    }
+    .itemListContainer .card .cardImg .miImg {
+        flex-grow: 1;
+    }
+}

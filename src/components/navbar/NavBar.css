@@ -44,30 +44,52 @@
     color: #000;
     transition: color .5s;
 }
-.barsContainer {
+.menuContainer, .iconLogInResponsive, .menuResponsiveLogIn {
     display: none;
 }
+
 @media only screen and (max-width: 990px) {
     .nav {
         position: relative;
         z-index: 500;
-        padding: 5px 10px;
         display: grid;
-        grid-template-rows: 47px;
-        grid-template-columns: 100px 1fr 150px;
+        grid-template-rows: 47px 30px;
+        grid-auto-rows: auto;
+        grid-template-columns: 100px 1fr 50px;
+    }
+    .nav .menuResponsiveLogIn {
+        display: block;
+        grid-row: 2/3;
+        grid-column: 1/5;
+        border-top: 1px solid #fff;
+        padding: 5px;
+        padding-left: 20px;
+        font-size: .9em;
+        text-align: left;
+    }
+    .nav .menuResponsiveLogIn h4 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
     }
     .nav div {
         flex-grow: 0;
         text-align: center;
+        background-color: #38f;
     }
     .navBar {
         display: block;
-        position: absolute;
+        position: relative;
         z-index: -1;
-        padding: 15px;
+        padding: 0 15px;
+        padding-bottom: 15px;
         font-size: 1.1em;
         background-color: #fff;
         width: 100%;
+        grid-row: 3/4;
+        grid-column: 1/5;
+    }
+    .navBarIcons .iconLogIn {
+        display: none;
     }
     .navBar li {
         margin: 14px auto;
@@ -78,33 +100,50 @@
         font-family: 'Lato', sans-serif;
         font-weight: 600;
     }
+    .navBarIcons .linkCart {
+        color: #fff;
+    }
+    .link article {
+        text-align: left;
+    }
+    .link article span {
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+    }
     .navBarIcons {
         margin: 0;
         flex-grow: 0;
+        height: 100%;
+        background-color: #38f;
     }
-
-    .nav .barsContainer {
+    .iconLogInResponsive {
+        display: block;
+    }
+    .nav .menuContainer {
         display: block;
         justify-content: flex-end;
         text-align: right;
+        background-color: #38f;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
-    .barsContainer button {
+    .menuContainer button {
         border: none;
         background-color: #38f;
     }
 
     .nav .showMenu {
         animation-name: show;
-        animation-duration: .4s;
+        animation-duration: .5s;
         animation-fill-mode: forwards;
         transition: animation 1s;
     }
     .nav .hideMenu {
         animation-name: hide;
-        animation-duration: .3s;
+        animation-duration: .5s;
         animation-fill-mode: forwards;
         transition: animation 1s;
-
     }
 
 
@@ -113,36 +152,36 @@
 
     @keyframes show {
         0% {
-            margin-top: 56px;
+            margin-top: -318px;
         }
         25% {
-            margin-top: 112px;
-        }
-        50% {
-            margin-top: 168px;
-        }
-        75% {
-            margin-top: 224px;
-        }
-        100% {
-            margin-top: 318px;
-        }
-    }
-    @keyframes hide {
-        0% {
-            margin-top: -56px;
-        }
-        25% {
-            margin-top: -112px;
+            margin-top: -224px;
         }
         50% {
             margin-top: -168px;
         }
         75% {
-            margin-top: -224px;
+            margin-top: -112px;
         }
         100% {
-            margin-top: -318px;
+            margin-top: 0px;
+        }
+    }
+    @keyframes hide {
+        0% {
+            margin-top: -60px;
+        }
+        25% {
+            margin-top: -120px;
+        }
+        50% {
+            margin-top: -180px;
+        }
+        75% {
+            margin-top: -240px;
+        }
+        100% {
+            margin-top: -355px;
         }
     }
 }

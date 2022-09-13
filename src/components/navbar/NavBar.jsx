@@ -2,32 +2,25 @@ import './NavBar.css';
 import logo from '../../assets/images/logo.jpg';
 import CartWidget from '../cartWidget/CartWidget';
 import { NavLink, Link } from 'react-router-dom';
-import {
-    AiOutlineLogin,
-    AiOutlineUser,
-    AiOutlineBars,
-    AiOutlineClose,
-} from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { cartContextProvider } from '../../context/CartContextProvider';
 import { useContext, useState } from 'react';
+import LinkLogIn from './LinkLogIn';
 
 const NavBar = () => {
     const { navigateTo, dataForm } = useContext(cartContextProvider);
 
-    const [bar, setBar] = useState(false);
+    const [menu, setMenu] = useState(false);
 
     const activeStyle = {
         color: '#000',
         fontSize: '.95em',
     };
 
-    const style = {
-        fontSize: '22px',
-    };
-
-    const barStyle = {
-        fontSize: '25px',
+    const menuStyle = {
+        fontSize: '2em',
         cursor: 'pointer',
+        color: '#fff',
     };
 
     const handleStyle = ({ isActive }) => (isActive ? activeStyle : undefined);
@@ -40,18 +33,18 @@ const NavBar = () => {
                         <img src={logo} alt="Logo de sonrisa" />
                     </Link>
                 </div>
-                <div className="barsContainer">
-                    {bar ? (
-                        <button onClick={() => setBar(false)}>
-                            <AiOutlineClose style={barStyle} />
+                <div className="menuContainer">
+                    {menu ? (
+                        <button onClick={() => setMenu(false)}>
+                            <AiOutlineClose style={menuStyle} />
                         </button>
                     ) : (
-                        <button onClick={() => setBar(true)}>
-                            <AiOutlineBars style={barStyle} />
+                        <button onClick={() => setMenu(true)}>
+                            <AiOutlineMenu style={menuStyle} />
                         </button>
                     )}
                 </div>
-                <ul className={`navBar ${bar ? 'showMenu' : 'hideMenu'}`}>
+                <ul className={`navBar ${menu ? 'showMenu' : 'hideMenu'}`}>
                     <li>
                         <NavLink to="/" className="link" style={handleStyle}>
                             Inicio
@@ -102,45 +95,37 @@ const NavBar = () => {
                             Muebles
                         </NavLink>
                     </li>
+                    <LinkLogIn
+                        navigateTo={navigateTo}
+                        name={dataForm.name}
+                        handleStyle={handleStyle}
+                        className="iconLogInResponsive"
+                    />
                 </ul>
                 <ul className="navBarIcons">
-                    {navigateTo ? (
-                        <li>
-                            <NavLink
-                                to="/dashboard"
-                                className="link"
-                                style={handleStyle}
-                            >
-                                <div>
-                                    <AiOutlineUser style={style} />
-                                    <span>{dataForm.name}</span>
-                                </div>
-                            </NavLink>
-                        </li>
-                    ) : (
-                        <li>
-                            <NavLink
-                                to="/login"
-                                className="link"
-                                style={handleStyle}
-                            >
-                                <div>
-                                    <AiOutlineLogin style={style} />
-                                    <span>Log in</span>
-                                </div>
-                            </NavLink>
-                        </li>
-                    )}
+                    <LinkLogIn
+                        navigateTo={navigateTo}
+                        name={dataForm.name}
+                        handleStyle={handleStyle}
+                        className="iconLogIn"
+                    />
                     <li>
                         <NavLink
                             to="/cart"
-                            className="link"
+                            className="link linkCart"
                             style={handleStyle}
                         >
                             <CartWidget />
                         </NavLink>
                     </li>
                 </ul>
+                <div className="menuResponsiveLogIn">
+                    {navigateTo ? (
+                        <h4>Bienvenido {dataForm.name.toUpperCase()}</h4>
+                    ) : (
+                        <h4>Log in</h4>
+                    )}
+                </div>
             </nav>
         </header>
     );
