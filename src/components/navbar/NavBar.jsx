@@ -13,7 +13,7 @@ const NavBar = () => {
     const [menu, setMenu] = useState(false);
 
     const activeStyle = {
-        color: '#000',
+        // color: '#000',
         fontSize: '.95em',
     };
 
@@ -119,13 +119,11 @@ const NavBar = () => {
                         </NavLink>
                     </li>
                 </ul>
-                <div className="menuResponsiveLogIn">
-                    {navigateTo ? (
+                {navigateTo && (
+                    <div className="menuResponsiveLogIn">
                         <h4>Bienvenido {dataForm.name.toUpperCase()}</h4>
-                    ) : (
-                        <h4>Log in</h4>
-                    )}
-                </div>
+                    </div>
+                )}
             </nav>
         </header>
     );

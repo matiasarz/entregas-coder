@@ -30,3 +30,17 @@
     width: -moz-fit-content;
     width: fit-content;
 }
+
+
+@media only screen and (max-width: 990px) {
+    .cartContainer .cartTotal {
+        align-items: center;
+    }
+    .cartContainer .cartTotal p {
+        font-size: 1.5em;
+    }
+    .buttonConfirmarCompra {
+        width: 80%;
+    }
+    
+}

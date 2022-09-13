@@ -14,6 +14,7 @@
     width: 60px;
     height: inherit;
     object-fit: contain;
+    padding: 2px;
 }
 .navBar {
     flex-grow: 3;
@@ -32,6 +33,9 @@
     font-size: .9em;
     color: #fff;
     transition: color .5s;
+}
+.navBar .active {
+    color: #000;
 }
 .navBarIcons {
     margin-right: 5%;
@@ -53,15 +57,15 @@
         position: relative;
         z-index: 500;
         display: grid;
-        grid-template-rows: 47px 30px;
+        grid-template-rows: 47px auto;
         grid-auto-rows: auto;
         grid-template-columns: 100px 1fr 50px;
     }
     .nav .menuResponsiveLogIn {
         display: block;
+        background-color: #000;
         grid-row: 2/3;
         grid-column: 1/5;
-        border-top: 1px solid #fff;
         padding: 5px;
         padding-left: 20px;
         font-size: .9em;
@@ -70,6 +74,7 @@
     .nav .menuResponsiveLogIn h4 {
         font-family: 'Lato', sans-serif;
         font-weight: 600;
+        color: #fff;
     }
     .nav div {
         flex-grow: 0;
@@ -82,23 +87,34 @@
         z-index: -1;
         padding: 0 15px;
         padding-bottom: 15px;
-        font-size: 1.1em;
+        font-size: 1.2em;
         background-color: #fff;
         width: 100%;
+        height: 100vh;
         grid-row: 3/4;
         grid-column: 1/5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
     .navBarIcons .iconLogIn {
         display: none;
     }
     .navBar li {
-        margin: 14px auto;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        width: 100%;
         border-bottom: 1px solid #999;
     }
     .navBar .link, .navBarIcons .link {
         color: #000;
         font-family: 'Lato', sans-serif;
         font-weight: 600;
+    }
+    .navBar .active {
+        color: #0067f8;
+        box-shadow:0 8px 2px -2px #999;
     }
     .navBarIcons .linkCart {
         color: #fff;
@@ -147,9 +163,6 @@
     }
 
 
-
-
-
     @keyframes show {
         0% {
             margin-top: -318px;
@@ -169,19 +182,19 @@
     }
     @keyframes hide {
         0% {
-            margin-top: -60px;
-        }
-        25% {
             margin-top: -120px;
         }
-        50% {
-            margin-top: -180px;
-        }
-        75% {
+        25% {
             margin-top: -240px;
         }
+        50% {
+            margin-top: -360px;
+        }
+        75% {
+            margin-top: -480px;
+        }
         100% {
-            margin-top: -355px;
+            margin-top: -710px;
         }
     }
 }

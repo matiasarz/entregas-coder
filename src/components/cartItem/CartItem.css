@@ -24,6 +24,13 @@
     justify-content: space-evenly;
     height: 100px;
 }
+.cartCountContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    border: 1px solid #999;
+    padding: 5px 10px;
+}
 .buttonDelete {
     border: none;
     background-color: #f00;
@@ -32,4 +39,29 @@
     font-size: .9em;  
     cursor: pointer;
     border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 990px) {
+    .cartList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .cartList .cartItemImg, .conf,p {
+        flex-grow: 1;
+    }
+    .cartList p {
+        text-align: center;
+    }
+    .conf {
+        align-items: center;
+        padding: 5px;
+    }
+    .conf .buttonDelete, .cartCountContainer {
+        width: 100%;
+        min-width: 190px;
+    }
 }
