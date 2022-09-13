@@ -25,7 +25,7 @@ const ItemDetail = ({ data = {}, to }) => {
         setStatePass(false);
     };
     const buttonStyle = {
-        fontSize: '25px',
+        fontSize: '2em',
         color: '#38f',
     };
 

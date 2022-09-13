@@ -116,6 +116,9 @@
         color: #0067f8;
         box-shadow:0 8px 2px -2px #999;
     }
+    .navBar .link:hover {
+        color: #0067f8;
+    }
     .navBarIcons .linkCart {
         color: #fff;
     }

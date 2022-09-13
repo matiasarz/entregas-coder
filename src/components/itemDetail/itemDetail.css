@@ -61,6 +61,40 @@
     width: 100%;
 }
 
+@media only screen and (max-width : 990px) {
+    .itemDetail .itemDetailInfo .buttonContainer {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (min-width: 390px) and (max-width : 500px) {
+    .itemDetail .itemDetailImg {
+        width: 360px;
+        height: 320px;
+        padding: 10px;
+        text-align: center;
+        flex-grow: 0;
+    }
+    .itemDetail .itemDetailImg .imgDetail {
+        width: 330px;
+        height: 300px;
+        object-fit: contain;
+    }
+    
+}
+@media only screen and (min-width: 390px) and (max-width : 818px) {
+    .itemDetail .itemDetailInfo h1 {
+        align-self: center;
+    }
+    .itemDetail .itemDetailInfo h2, p {
+        align-self: center;
+    }
+    .itemDetail .itemDetailInfo {
+        flex-grow: 1;
+    }
+}
+
 @media only screen and (min-width: 900px) and (max-width: 1050px) {
     .itemDetail .itemDetailImg .imgDetail {
         width: 460px;
