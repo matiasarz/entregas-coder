@@ -21,7 +21,6 @@
     width: 100px;
 }
 .buttonContainer .addCart {
-    background-color: #fff;
     border: 2px solid #38f;
     background-color: #38f;
     border-radius: 5px;
@@ -36,4 +35,22 @@
 .buttonContainer .addCart:hover {
     background-color: #fff;
     color: #38f;
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 990px) {
+
+    .buttonContainer .addCart {
+        border: 2px solid #38f;
+        color: #fff;
+        background-color: #38f;
+        border-radius: 5px;
+        display: block;
+        width: 100%;
+        padding: 6px 18px;
+        margin: auto;
+        font-weight: 700;
+        text-align: center;
+        cursor: pointer;
+    }
 }

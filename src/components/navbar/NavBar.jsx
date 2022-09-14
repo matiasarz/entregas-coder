@@ -18,7 +18,7 @@ const NavBar = () => {
     };
 
     const menuStyle = {
-        fontSize: '2em',
+        fontSize: '2.5em',
         cursor: 'pointer',
         color: '#fff',
     };

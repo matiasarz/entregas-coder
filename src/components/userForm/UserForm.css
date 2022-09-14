@@ -5,7 +5,7 @@
 .formContainer div input {
     outline: none;
     width: inherit;
-    padding: 5px;
+    padding: 10px 5px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     color: #38f;
@@ -14,14 +14,14 @@
     color: #38f;
 }
 .formContainer button {
-    background-color: #38f;
-    color: #fff;
     border: none;
+    color: #fff;
+    background-color: #38f;
     border-radius: 5px;
+    display: block;
     padding: 6px 18px;
-    margin-top: 18px;
-    cursor: pointer;
-    font-size: 1em;
+    margin: auto;
     font-weight: 700;
-    font-family: 'Lato', sans-serif;
+    text-align: center;
+    cursor: pointer;
 }

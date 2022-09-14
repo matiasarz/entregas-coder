@@ -6,7 +6,7 @@ const CartWidget = () => {
     const { productAdd } = useContext(cartContextProvider);
 
     const cartStyle = {
-        fontSize: '22px',
+        fontSize: '2em',
         cursor: 'pointer',
     };
 

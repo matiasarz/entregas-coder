@@ -85,7 +85,6 @@
         display: block;
         position: relative;
         z-index: -1;
-        padding: 0 15px;
         padding-bottom: 15px;
         font-size: 1.2em;
         background-color: #fff;
@@ -102,22 +101,28 @@
         display: none;
     }
     .navBar li {
-        padding-top: 15px;
-        padding-bottom: 5px;
+        flex-grow: 1;
         width: 100%;
         border-bottom: 1px solid #999;
+        border-top: 1px solid #999;
+        display: flex;
+        align-items: center;
     }
     .navBar .link, .navBarIcons .link {
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        /* padding-left: 20px; */
         color: #000;
         font-family: 'Lato', sans-serif;
         font-weight: 600;
     }
     .navBar .active {
-        color: #0067f8;
-        box-shadow:0 8px 2px -2px #999;
+        color: #fff;
+        background-color: #73a5eb;
     }
     .navBar .link:hover {
-        color: #0067f8;
+        color: #fff;
     }
     .navBarIcons .linkCart {
         color: #fff;
