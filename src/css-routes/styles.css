@@ -12,12 +12,17 @@
     display: flex;
     justify-content: space-around;
     gap: 30px;
+    margin-top: 20px;
 }
 .sectionContainer .categoryContainer {
     flex-grow: 1;
     width: 700px;
 }
 
+.mainContainer .frontPage {
+    width: 100%;
+    object-fit: contain;
+}
 
 @media only screen and (max-width: 990px) {
     .sectionContainer .sectionTitle {
