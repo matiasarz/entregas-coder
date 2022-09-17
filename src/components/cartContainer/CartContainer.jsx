@@ -4,6 +4,10 @@ import { cartContextProvider } from '../../context/CartContextProvider';
 import { uploadOrderToFirestoreDB } from '../../services/firebase';
 import CartItem from '../cartItem/CartItem';
 import './CartContainer.css';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const MySwal = withReactContent(Swal);
 
 const CartContainer = () => {
     const {
@@ -24,6 +28,13 @@ const CartContainer = () => {
 
     const handleClick = () => {
         uploadOrderToFirestoreDB(order);
+
+        MySwal.fire({
+            title: <strong>Gracias por la compra</strong>,
+            html: <i>Ticket de compra en el perfil</i>,
+            icon: 'success',
+        });
+
         setProductAdd([]);
     };
 

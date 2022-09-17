@@ -54,7 +54,12 @@ const ItemDetail = ({ data = {}, to }) => {
                             statePass={statePass}
                         />
                     ) : (
-                        <ButtonComprar productDetail={productDetail} />
+                        <>
+                            <ButtonComprar productDetail={productDetail} />
+                            <Link to="/" className="buttonComprar">
+                                <div>Seguir comprando</div>
+                            </Link>
+                        </>
                     )}
                 </div>
             </div>

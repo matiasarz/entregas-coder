@@ -10,6 +10,14 @@ import LinkLogIn from './LinkLogIn';
 const NavBar = () => {
     const { navigateTo, dataForm } = useContext(cartContextProvider);
 
+    let userName;
+
+    if (Object.entries(dataForm).length) {
+        userName = dataForm.name[0]
+            .toUpperCase()
+            .concat(dataForm.name.slice(1, dataForm.name.length));
+    }
+
     const [menu, setMenu] = useState(false);
 
     const activeStyle = {
@@ -97,7 +105,7 @@ const NavBar = () => {
                     </li>
                     <LinkLogIn
                         navigateTo={navigateTo}
-                        name={dataForm.name}
+                        name={userName}
                         handleStyle={handleStyle}
                         className="iconLogInResponsive"
                     />
@@ -105,7 +113,7 @@ const NavBar = () => {
                 <ul className="navBarIcons">
                     <LinkLogIn
                         navigateTo={navigateTo}
-                        name={dataForm.name}
+                        name={userName}
                         handleStyle={handleStyle}
                         className="iconLogIn"
                     />
@@ -121,7 +129,7 @@ const NavBar = () => {
                 </ul>
                 {navigateTo && (
                     <div className="menuResponsiveLogIn">
-                        <h4>Bienvenido {dataForm.name.toUpperCase()}</h4>
+                        <h4>Bienvenido {userName}</h4>
                     </div>
                 )}
             </nav>
