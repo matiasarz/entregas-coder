@@ -1,10 +1,17 @@
 import './Footer.css';
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
 
 const Footer = () => {
     return (
         <footer className="footerContainer">
             <div className="socialMediaContainer">
+                <a
+                    href="https://www.instagram.com/arzamendiamatiasm/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <AiFillInstagram className="icon" />
+                </a>
                 <a
                     href="https://www.linkedin.com/in/matias-arzamendia-17b4ba170/"
                     target="_blank"

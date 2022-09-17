@@ -23,13 +23,17 @@ const Tecnologia = ({ title }) => {
             <div className="categoryContainer">
                 <h1 className="sectionTitle">{title}</h1>
                 <div className="itemListContainer">
-                    {itemCategory.map((item) => (
-                        <Item
-                            key={item.id}
-                            data={item}
-                            to={`/tecnologia/detalle/${item.id}`}
-                        />
-                    ))}
+                    {!itemCategory.length ? (
+                        <h2>No hay resultados para el filtro</h2>
+                    ) : (
+                        itemCategory.map((item) => (
+                            <Item
+                                key={item.id}
+                                data={item}
+                                to={`/tecnologia/detalle/${item.id}`}
+                            />
+                        ))
+                    )}
                 </div>
             </div>
         </section>

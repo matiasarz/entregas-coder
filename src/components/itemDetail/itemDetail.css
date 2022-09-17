@@ -30,6 +30,8 @@
 }
 .itemDetail .itemDetailInfo p {
     margin: 7px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
 }
 .itemDetail .itemDetailInfo h2 {
     font-family: 'Lato', sans-serif;

@@ -10,7 +10,7 @@ import { cartContextProvider } from '../../context/CartContextProvider';
 const ItemDetail = ({ data = {}, to }) => {
     const { duplicados } = useContext(cartContextProvider);
 
-    const { imgUrl, price, name, stock, id } = data;
+    const { imgUrl, price, name, stock, id, description } = data;
 
     const [statePass, setStatePass] = useState(true);
     const [productDetail, setProductDetail] = useState({});
@@ -41,7 +41,7 @@ const ItemDetail = ({ data = {}, to }) => {
                 <div className="itemDetailInfo">
                     <h1>{name}</h1>
                     <h2>${price}</h2>
-                    <p>Descripción: </p>
+                    <p>Descripción: {description}</p>
                     <p>
                         Stock: <b>{stock}</b>
                     </p>
