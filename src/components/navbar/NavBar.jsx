@@ -13,7 +13,7 @@ const NavBar = () => {
     const [menu, setMenu] = useState(false);
 
     const activeStyle = {
-        // color: '#000',
+        color: '#000',
         fontSize: '.95em',
     };
 

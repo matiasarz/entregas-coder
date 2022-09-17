@@ -8,10 +8,6 @@
     padding: 10px 5px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
-    color: #38f;
-}
-.formContainer div input::placeholder {
-    color: #38f;
 }
 .formContainer button {
     border: none;
@@ -19,7 +15,7 @@
     background-color: #38f;
     border-radius: 5px;
     display: block;
-    padding: 6px 18px;
+    padding: 12px 18px;
     margin: auto;
     font-weight: 700;
     text-align: center;
