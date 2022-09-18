@@ -1,4 +1,7 @@
 .mainContainer h1 {
     text-align: center;
 }
+.itemListContainer {
+    padding: 0 5px;
+}
 
