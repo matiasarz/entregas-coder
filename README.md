@@ -6,3 +6,7 @@ Al finalizar la compra se genera un ticket de compra que quedara guardado en tu 
 ## Tecnologías
 
 React, React-router, firebase
+
+## Deploy
+
+https://blue-store.netlify.app/
