@@ -1,7 +1,13 @@
+.sectionCartContainer {
+    width: 90%;
+    margin: 22px auto;
+}
 .sectionCartContainer .sectionTitle {
     font-family: 'Lato', sans-serif;
     font-weight: 1000;
     font-size: 1.7em;
+    width: 90%;
+    margin: auto;
 }
 .sectionContainer .sectionTitle {
     font-family: 'Lato', sans-serif;
