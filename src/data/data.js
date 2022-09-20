@@ -6,7 +6,7 @@ export const data = [
         stock: 46,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 2859,
+        price: 52859,
         imgUrl: 'https://i.ibb.co/GpFRGbq/item2.webp',
         category: 'electrodomesticos',
     },
@@ -17,7 +17,7 @@ export const data = [
         stock: 24,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 8098,
+        price: 58098,
         imgUrl: 'https://i.ibb.co/rHJqVW8/item1.jpg',
         category: 'electrodomesticos',
     },
@@ -28,7 +28,7 @@ export const data = [
         stock: 53,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1107,
+        price: 9107,
         imgUrl: 'https://i.ibb.co/xMVq4RX/item4.jpg',
         category: 'electrodomesticos',
     },
@@ -39,7 +39,7 @@ export const data = [
         stock: 34,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1679,
+        price: 7779,
         imgUrl: 'https://i.ibb.co/0JR4DPg/item3.jpg',
         category: 'electrodomesticos',
     },
@@ -50,7 +50,7 @@ export const data = [
         stock: 54,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 4869,
+        price: 34869,
         imgUrl: 'https://i.ibb.co/YfyYjBS/item5.jpg',
         category: 'electrodomesticos',
     },
@@ -61,7 +61,7 @@ export const data = [
         stock: 50,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 3984,
+        price: 31984,
         imgUrl: 'https://i.ibb.co/rmzx71y/item6.png',
         category: 'electrodomesticos',
     },
@@ -72,7 +72,7 @@ export const data = [
         stock: 61,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1447,
+        price: 4447,
         imgUrl: 'https://i.ibb.co/QD4gD4X/item7.jpg',
         category: 'electrodomesticos',
     },
@@ -83,7 +83,7 @@ export const data = [
         stock: 34,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1401,
+        price: 17401,
         imgUrl: 'https://i.ibb.co/jzKfB9x/item8.jpg',
         category: 'electrodomesticos',
     },
@@ -94,7 +94,7 @@ export const data = [
         stock: 39,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 8960,
+        price: 18960,
         imgUrl: 'https://i.ibb.co/TqdzZ12/item9.jpg',
         category: 'electrodomesticos',
     },
@@ -116,7 +116,7 @@ export const data = [
         stock: 49,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 6999,
+        price: 2999,
         imgUrl: 'https://i.ibb.co/PQsKYL0/item2.jpg',
         category: 'indumentaria',
     },
@@ -138,7 +138,7 @@ export const data = [
         stock: 22,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 8896,
+        price: 4896,
         imgUrl: 'https://i.ibb.co/vvwBMdB/item3.jpg',
         category: 'indumentaria',
     },
@@ -149,7 +149,7 @@ export const data = [
         stock: 55,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 3628,
+        price: 1628,
         imgUrl: 'https://i.ibb.co/R0kvStS/item5.webp',
         category: 'indumentaria',
     },
@@ -171,7 +171,7 @@ export const data = [
         stock: 41,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 7942,
+        price: 3942,
         imgUrl: 'https://i.ibb.co/94rkfQD/item6.jpg',
         category: 'indumentaria',
     },
@@ -226,7 +226,7 @@ export const data = [
         stock: 21,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 3285,
+        price: 31285,
         imgUrl: 'https://i.ibb.co/Xs0DxbV/item2.jpg',
         category: 'muebles',
     },
@@ -237,7 +237,7 @@ export const data = [
         stock: 12,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 4495,
+        price: 7495,
         imgUrl: 'https://i.ibb.co/SnT4ksV/item1.jpg',
         category: 'muebles',
     },
@@ -248,7 +248,7 @@ export const data = [
         stock: 24,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 2648,
+        price: 22648,
         imgUrl: 'https://i.ibb.co/8xBfrPT/item3.jpg',
         category: 'muebles',
     },
@@ -270,7 +270,7 @@ export const data = [
         stock: 11,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 6897,
+        price: 16897,
         imgUrl: 'https://i.ibb.co/JQVfjPp/item4.jpg',
         category: 'muebles',
     },
@@ -281,7 +281,7 @@ export const data = [
         stock: 25,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1700,
+        price: 9400,
         imgUrl: 'https://i.ibb.co/gPf9R88/item6.jpg',
         category: 'muebles',
     },
@@ -292,7 +292,7 @@ export const data = [
         stock: 26,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 3891,
+        price: 36891,
         imgUrl: 'https://i.ibb.co/Jyccx8v/item7.jpg',
         category: 'muebles',
     },
@@ -303,7 +303,7 @@ export const data = [
         stock: 58,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 8712,
+        price: 16712,
         imgUrl: 'https://i.ibb.co/QYZhYhB/item8.jpg',
         category: 'muebles',
     },
@@ -314,7 +314,7 @@ export const data = [
         stock: 37,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 4207,
+        price: 24207,
         imgUrl: 'https://i.ibb.co/kQz0fDq/item9.jpg',
         category: 'muebles',
     },
@@ -325,7 +325,7 @@ export const data = [
         stock: 34,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 2439,
+        price: 21439,
         imgUrl: 'https://i.ibb.co/xGYKy9Q/item10.webp',
         category: 'muebles',
     },
@@ -336,7 +336,7 @@ export const data = [
         stock: 54,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1679,
+        price: 41679,
         imgUrl: 'https://i.ibb.co/LZhkjSq/item2.webp',
         category: 'tecnologia',
     },
@@ -347,7 +347,7 @@ export const data = [
         stock: 36,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 4042,
+        price: 54042,
         imgUrl: 'https://i.ibb.co/F5npqYm/item1.png',
         category: 'tecnologia',
     },
@@ -358,7 +358,7 @@ export const data = [
         stock: 12,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 8051,
+        price: 68051,
         imgUrl: 'https://i.ibb.co/bP4fpYQ/item3.webp',
         category: 'tecnologia',
     },
@@ -369,7 +369,7 @@ export const data = [
         stock: 55,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 6405,
+        price: 88405,
         imgUrl: 'https://i.ibb.co/Pgn9crL/item4.jpg',
         category: 'tecnologia',
     },
@@ -380,7 +380,7 @@ export const data = [
         stock: 15,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 9367,
+        price: 99367,
         imgUrl: 'https://i.ibb.co/Xznc2xL/item5.jpg',
         category: 'tecnologia',
     },
@@ -391,7 +391,7 @@ export const data = [
         stock: 22,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 5388,
+        price: 95388,
         imgUrl: 'https://i.ibb.co/ggN17sB/item7.jpg',
         category: 'tecnologia',
     },
@@ -402,7 +402,7 @@ export const data = [
         stock: 38,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 7402,
+        price: 71402,
         imgUrl: 'https://i.ibb.co/16LNCmC/item8.webp',
         category: 'tecnologia',
     },
@@ -413,7 +413,7 @@ export const data = [
         stock: 57,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1766,
+        price: 91766,
         imgUrl: 'https://i.ibb.co/Fnhf13C/item9.webp',
         category: 'tecnologia',
     },
@@ -424,7 +424,7 @@ export const data = [
         stock: 63,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1975,
+        price: 99975,
         imgUrl: 'https://i.ibb.co/WcvBqmj/item6.png',
         category: 'tecnologia',
     },
@@ -435,7 +435,7 @@ export const data = [
         stock: 60,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 1020,
+        price: 41020,
         imgUrl: 'https://i.ibb.co/bg1MpYv/item10.webp',
         category: 'tecnologia',
     },
@@ -457,7 +457,7 @@ export const data = [
         stock: 25,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 5742,
+        price: 1742,
         imgUrl: 'https://i.ibb.co/VJs5sJC/item9.jpg',
         category: 'belleza',
     },
@@ -468,7 +468,7 @@ export const data = [
         stock: 56,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 7392,
+        price: 1392,
         imgUrl: 'https://i.ibb.co/TLS93rS/item8.jpg',
         category: 'belleza',
     },
@@ -479,7 +479,7 @@ export const data = [
         stock: 45,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 7477,
+        price: 1477,
         imgUrl: 'https://i.ibb.co/G2dTQk5/item7.jpg',
         category: 'belleza',
     },
@@ -501,7 +501,7 @@ export const data = [
         stock: 48,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 7391,
+        price: 1391,
         imgUrl: 'https://i.ibb.co/ky6zR8t/item5.jpg',
         category: 'belleza',
     },
@@ -512,7 +512,7 @@ export const data = [
         stock: 37,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 9211,
+        price: 1211,
         imgUrl: 'https://i.ibb.co/z8qCQ2w/item4.jpg',
         category: 'belleza',
     },
@@ -523,7 +523,7 @@ export const data = [
         stock: 32,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 4318,
+        price: 1318,
         imgUrl: 'https://i.ibb.co/TPnhxJ5/item3.png',
         category: 'belleza',
     },
@@ -534,7 +534,7 @@ export const data = [
         stock: 27,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 8775,
+        price: 1775,
         imgUrl: 'https://i.ibb.co/W5qM4hr/item2.webp',
         category: 'belleza',
     },
@@ -545,7 +545,7 @@ export const data = [
         stock: 37,
         description:
             'Descripción del producto super hiper mega larga para mostrar algo por pantalla, si te gusto mi app mandame un mensaje en mis redes, para subirme la serotonina o hormona de la felicidad :)',
-        price: 9064,
+        price: 1064,
         imgUrl: 'https://i.ibb.co/4WZtW5C/item1.jpg',
         category: 'belleza',
     },
