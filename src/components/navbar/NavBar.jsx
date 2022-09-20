@@ -33,6 +33,33 @@ const NavBar = () => {
 
     const handleStyle = ({ isActive }) => (isActive ? activeStyle : undefined);
 
+    const navBarLinks = [
+        {
+            linkName: 'Inicio',
+            link: '/',
+        },
+        {
+            linkName: 'Belleza',
+            link: '/belleza',
+        },
+        {
+            linkName: 'Electrodomésticos',
+            link: '/electrodomesticos',
+        },
+        {
+            linkName: 'Indumentaria',
+            link: '/indumentaria',
+        },
+        {
+            linkName: 'Tecnología',
+            link: '/tecnologia',
+        },
+        {
+            linkName: 'Muebles',
+            link: '/muebles',
+        },
+    ];
+
     return (
         <header className="navContainer">
             <nav className="nav">
@@ -53,60 +80,23 @@ const NavBar = () => {
                     )}
                 </div>
                 <ul className={`navBar ${menu ? 'showMenu' : 'hideMenu'}`}>
-                    <li>
-                        <NavLink to="/" className="link" style={handleStyle}>
-                            Inicio
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/belleza"
-                            className="link"
-                            style={handleStyle}
-                        >
-                            Belleza
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/electrodomesticos"
-                            className="link"
-                            style={handleStyle}
-                        >
-                            Electrodomésticos
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/indumentaria"
-                            className="link"
-                            style={handleStyle}
-                        >
-                            Indumentaria
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/tecnologia"
-                            className="link"
-                            style={handleStyle}
-                        >
-                            Tecnología
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/muebles"
-                            className="link"
-                            style={handleStyle}
-                        >
-                            Muebles
-                        </NavLink>
-                    </li>
+                    {navBarLinks.map((item) => (
+                        <li key={item.link}>
+                            <NavLink
+                                to={item.link}
+                                className="link"
+                                onClick={() => setMenu(false)}
+                                style={handleStyle}
+                            >
+                                {item.linkName}
+                            </NavLink>
+                        </li>
+                    ))}
                     <LinkLogIn
                         navigateTo={navigateTo}
                         name={userName}
                         handleStyle={handleStyle}
+                        onClick={() => setMenu(false)}
                         className="iconLogInResponsive"
                     />
                 </ul>
