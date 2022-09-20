@@ -96,7 +96,7 @@ const NavBar = () => {
                         navigateTo={navigateTo}
                         name={userName}
                         handleStyle={handleStyle}
-                        onClick={() => setMenu(false)}
+                        setMenu={setMenu}
                         className="iconLogInResponsive"
                     />
                 </ul>

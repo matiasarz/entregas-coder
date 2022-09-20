@@ -1,7 +1,7 @@
 import { AiOutlineLogin, AiOutlineUser } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 
-const LinkLogIn = ({ navigateTo, name, handleStyle, className }) => {
+const LinkLogIn = ({ navigateTo, name, handleStyle, className, setMenu }) => {
     const style = {
         fontSize: '22px',
     };
@@ -9,7 +9,7 @@ const LinkLogIn = ({ navigateTo, name, handleStyle, className }) => {
     return (
         <>
             {navigateTo ? (
-                <li className={className}>
+                <li className={className} onClick={() => setMenu(false)}>
                     <NavLink
                         to="/dashboard"
                         className="link"
@@ -22,7 +22,7 @@ const LinkLogIn = ({ navigateTo, name, handleStyle, className }) => {
                     </NavLink>
                 </li>
             ) : (
-                <li className={className}>
+                <li className={className} onClick={() => setMenu(false)}>
                     <NavLink to="/login" className="link" style={handleStyle}>
                         <article>
                             <AiOutlineLogin style={style} />
